@@ -16,7 +16,7 @@ from telethon.events import StopPropagation
 from pyrogram.types.messages_and_media import Message
 from pyrogram import Client, filters
 import time
-from config import client, USERNAME, log_qrup, startmesaj, qrupstart, komutlar, sahib, support
+from config import client, USERNAME, log_qrup, startmesaj, qrupstart, komutlar, sahib, support, ozel_list
 
 logging.basicConfig(
     level=logging.INFO,
@@ -505,9 +505,48 @@ async def rtag(event):
         usrtxt = ""
 
     
-#########################
+### İstatistik ve broadcast modülü
 
 
-print(">> Bot çalışmaktadur merak etme 🚀 @mutsuz_panda bilgi alabilirsin <<")
+@client.on(events.NewMessage())
+async def mentionalladmin(event):
+  global grup_sayi
+  if event.is_group:
+    if event.chat_id in grup_sayi:
+      pass
+    else:
+      grup_sayi.append(event.chat_id)
+
+@client.on(events.NewMessage(pattern='^/botstatik ?(.*)'))
+async def son_durum(event):
+    global anlik_calisan,grup_sayi,ozel_list
+    sender = await event.get_sender()
+    if sender.id not in ozel_list:
+      return
+    await event.respond(f"**Gece kuşu Tagger İstatistikleri 🤖**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlık Çalışan Grup: `{len(anlik_calisan)}`")
+
+
+@client.on(events.NewMessage(pattern='^/botreklam ?(.*)'))
+async def duyuru(event):
+ 
+  global grup_sayi,ozel_list
+  sender = await event.get_sender()
+  if sender.id not in ozel_list:
+    return
+  reply = await event.get_reply_message()
+  await event.respond(f"Toplam {len(grup_sayi)} Gruba'a mesaj gönderiliyor...")
+  for x in grup_sayi:
+    try:
+      await client.send_message(x,f"**📣 Sponsor**\n\n{reply.message}")
+    except:
+      pass
+  await event.respond(f"Gönderildi.")
+
+@app.on_message(filters.user(ozel_list) & filters.command(["botcum"], ["."]))
+def admin(_, message: Message):
+    message.reply(f"__Merhaba Sahip Bey ❤️__")
+
+
+app.run()
+print(">> Bot çalışıyor <<")
 client.run_until_disconnected()
-run_until_disconnected()
