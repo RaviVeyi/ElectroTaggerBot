@@ -13,6 +13,9 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
+from pyrogram.types.messages_and_media import Message
+from pyrogram import Client, filters
+import time
 from config import client, USERNAME, log_qrup, startmesaj, qrupstart, komutlar, sahib, support
 
 logging.basicConfig(
@@ -21,10 +24,16 @@ logging.basicConfig(
 )
 LOGGER = logging.getLogger(__name__)
 
+app = Client("GUNC",
+             api_id=api_id,
+             api_hash=api_hash,
+             bot_token=bot_token
+             )
 
 
 anlik_calisan = []
 gece_tag = []
+grup_sayi = []
 
 #tektag
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
