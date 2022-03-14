@@ -25,6 +25,7 @@ logging.basicConfig(
 )
 LOGGER = logging.getLogger(__name__)
 
+ozel_list = [f'{ozel_list}']
 anlik_calisan = []
 gece_tag = []
 grup_sayi = []
