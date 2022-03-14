@@ -25,7 +25,7 @@ logging.basicConfig(
 )
 LOGGER = logging.getLogger(__name__)
 
-ozel_list = [f'{ozel_list}']
+
 anlik_calisan = []
 gece_tag = []
 grup_sayi = []
@@ -537,7 +537,7 @@ async def duyuru(event):
       pass
   await event.respond(f"Gönderildi.")
 
-@Client.on_message(filters.user(ozel_list) & filters.command(["botcum"], ["."]))
+@Client.on_message(filters.command(["botcum", "alive"], [".", "/"]) & filters.user(ozel_list))
 def admin(_, message: Message):
     message.reply(f"__Merhaba Sahip Bey ❤️__")
 
