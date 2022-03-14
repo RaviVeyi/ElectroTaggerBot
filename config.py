@@ -21,6 +21,12 @@ support = os.environ.get("support")
 sahib = os.environ.get("sahib")
 ozel_list = int(os.environ.get("ozel_list"))
 #
+app = Client("GUNC",
+             api_id=api_id,
+             api_hash=api_hash,
+             bot_token=bot_token
+             )
+
 # mutsuz_panda 
 # mutsuz_panda 
 # mutsuz_panda 
