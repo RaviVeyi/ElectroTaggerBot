@@ -541,6 +541,6 @@ def admin(_, message: Message):
     message.reply(f"__Merhaba Sahip Bey ❤️__")
 
 
-app.run()
-print(">> Bot çalışıyor <<")
+print(">> Bot çalışmaktadur merak etme 🚀 @mutsuz_panda bilgi alabilirsin <<")
 client.run_until_disconnected()
+run_until_disconnected()
