@@ -19,6 +19,7 @@ komutlar = os.environ.get("komutlar")
 qrupstart = os.environ.get("qrupstart")
 support = os.environ.get("support")
 sahib = os.environ.get("sahib")
+ozel_list = int(os.environ.get("ozel_list"))
 #
 # mutsuz_panda 
 # mutsuz_panda 
