@@ -1,6 +1,10 @@
 import os
 import heroku3
 from telethon import TelegramClient, events
+
+from pyrogram import Client
+from pyrogram import filters
+import logging
 #
 # Burayı gurcalama
 # 
