@@ -536,7 +536,7 @@ async def duyuru(event):
       pass
   await event.respond(f"Gönderildi.")
 
-@app.on_message(filters.user(ozel_list) & filters.command(["botcum"], ["."]))
+@Client.on_message(filters.user(ozel_list) & filters.command(["botcum"], ["."]))
 def admin(_, message: Message):
     message.reply(f"__Merhaba Sahip Bey ❤️__")
 
