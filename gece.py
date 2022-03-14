@@ -24,13 +24,6 @@ logging.basicConfig(
 )
 LOGGER = logging.getLogger(__name__)
 
-app = Client("GUNC",
-             api_id=api_id,
-             api_hash=api_hash,
-             bot_token=bot_token
-             )
-
-
 anlik_calisan = []
 gece_tag = []
 grup_sayi = []
