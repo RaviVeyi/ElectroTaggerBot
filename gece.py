@@ -17,7 +17,7 @@ from telethon.events import StopPropagation
 from pyrogram.types.messages_and_media import Message
 from pyrogram import Client, filters
 import time
-from config import client, USERNAME, log_qrup, startmesaj, qrupstart, komutlar, sahib, support, ozel_list
+from config import client, USERNAME, log_qrup, startmesaj, qrupstart, komutlar, sahib, support
 
 logging.basicConfig(
     level=logging.INFO,
@@ -25,7 +25,7 @@ logging.basicConfig(
 )
 LOGGER = logging.getLogger(__name__)
 
-
+ozel_list = int(os.environ.get("ozel_list"))
 anlik_calisan = []
 gece_tag = []
 grup_sayi = []
