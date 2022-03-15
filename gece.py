@@ -17,7 +17,7 @@ from telethon.events import StopPropagation
 from pyrogram.types.messages_and_media import Message
 from pyrogram import Client, filters
 import time
-from config import client, USERNAME, log_qrup, startmesaj, qrupstart, komutlar, sahib, support
+from config import client, USERNAME, log_qrup, startmesaj, qrupstart, komutlar, sahib, support, OWNER_ID
 
 logging.basicConfig(
     level=logging.INFO,
@@ -25,7 +25,7 @@ logging.basicConfig(
 )
 LOGGER = logging.getLogger(__name__)
 
-ozel_list = int(os.environ.get("ozel_list"))
+
 anlik_calisan = []
 gece_tag = []
 grup_sayi = []
@@ -514,9 +514,9 @@ async def mentionalladmin(event):
 
 @client.on(events.NewMessage(pattern='^/botstatik ?(.*)'))
 async def son_durum(event):
-    global anlik_calisan,grup_sayi,ozel_list
+    global anlik_calisan,grup_sayi,OWNER_ID
     sender = await event.get_sender()
-    if sender.id not in ozel_list:
+    if sender.id not in OWNER_ID:
       return
     await event.respond(f"**Gece kuşu Tagger İstatistikleri 🤖**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlık Çalışan Grup: `{len(anlik_calisan)}`")
 
@@ -524,9 +524,9 @@ async def son_durum(event):
 @client.on(events.NewMessage(pattern='^/botreklam ?(.*)'))
 async def duyuru(event):
  
-  global grup_sayi,ozel_list
+  global grup_sayi,OWNER_ID
   sender = await event.get_sender()
-  if sender.id not in ozel_list:
+  if sender.id not in OWNER_ID:
     return
   reply = await event.get_reply_message()
   await event.respond(f"Toplam {len(grup_sayi)} Gruba'a mesaj gönderiliyor...")
@@ -537,7 +537,7 @@ async def duyuru(event):
       pass
   await event.respond(f"Gönderildi.")
 
-@Client.on_message(filters.command(["botcum", "alive"], [".", "/"]) & filters.user(ozel_list))
+@Client.on_message(filters.command(["botcum", "alive"], [".", "/"]) & filters.user(OWNER_ID))
 def admin(_, message: Message):
     message.reply(f"__Merhaba Sahip Bey ❤️__")
 
