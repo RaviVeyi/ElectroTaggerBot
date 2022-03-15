@@ -1,5 +1,6 @@
 from pyrogram.types.messages_and_media import Message
 from pyrogram import Client, filters
+from Tag_Bot import OWNER_ID
 import time 
 
 
