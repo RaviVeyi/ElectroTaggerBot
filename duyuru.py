@@ -1,9 +1,9 @@
 from pyrogram.types.messages_and_media import Message
 from pyrogram import Client, filters
-from Tag_Bot import OWNER_ID
+from config import ozel_list
 import time 
 
-
+grup_sayi = [] 
 
 @client.on(events.NewMessage())
 async def mentionalladmin(event):
