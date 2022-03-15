@@ -23,7 +23,7 @@ komutlar = os.environ.get("komutlar")
 qrupstart = os.environ.get("qrupstart")
 support = os.environ.get("support")
 sahib = os.environ.get("sahib")
-OWNER_ID = int(os.environ.get("OWNER_ID"))
+ozel_list = int(os.environ.get("ozel_list"))
 #
 app = Client("GUNC",
              api_id=api_id,
