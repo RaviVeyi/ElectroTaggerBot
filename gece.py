@@ -432,7 +432,8 @@ async def stag(event):
     
 #########################
 #cümlələrlə tag
-"Su qabını daşlığa aparan kimsə, onu daşdan qorumağı öyrənməlidir."
+ctag = (
+  "Su qabını daşlığa aparan kimsə, onu daşdan qorumağı öyrənməlidir."
 "Nə qədər bilirsənsə bil, söylədiklərin qarşındakının anlayacağı qədərdir…"
 "bayaqdan səni gözləyirəm hardasan😒"
 "Təəssüf ki, sən dəlisən, anormalsan, başın çatmır. Amma sənə bir sirr verim, yaxşı insanların çoxu elə olur"
@@ -448,7 +449,7 @@ async def stag(event):
 "Əhəmiyyətsiz saydığımız ən adi hadisələr bəzən həyatımızı cəhənnəmə döndərə bilər."
 "Bəzən düşünmədən yaşamaq lazımdır, bəzən də yaşadıqlarını düşünməmək..."
 "Məsafələr, sevməyi bacarmayanların bəhanəsidir..."
-"Birini sevməyə başlamaq başlı başına bir iş, bir cəhddir. Güc istər, ürək istər, korluq istər. Hətta başlanğıcda elə bir an vardır ki uçurumun üstündən sıçramaq istər; düşünməyə çalışsan aşa bilməzsən onu."
+"Birini sevməyə başlamaq başlı başına bir iş, bir cəhddir. Güc istər, ürək istər, korluq istər. Hətta başlanğıcda elə bir an vardır ki uçurumun üstündən sıçramaq istər; düşünməyə çalışsan aşa bilməzsən on."
 "Səni sevəni sevmək özünə vurğunluqdur. Səni sevməyəni sevmək, bax bu məhəbbətdir..."
 "Könül almağı bacarmayana ömür əmanət edilməz."
 "Bu gözəl həyat təkcə bizim deyil. Bu həqiqəti anlayıb başqalarına ziyan vermədən yaşamağı öyrənməliyik. "
@@ -464,16 +465,7 @@ async def stag(event):
 "Nə çətindir, yazaraq izah etməyə çalışmaq susduqlarını."
 "Qırılacaq 206 dənə sümüyünüz varkən, axmağın biri gəlir ürəyimizi qırır."
 
-
-
-
-
-
-
-
-
-
-
+)
 @client.on(events.NewMessage(pattern="^/ctag ?(.*)"))
 async def ctag(event):
   global gece_tag
@@ -512,7 +504,7 @@ async def ctag(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(soz)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(ctag)}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
         await event.respond("⛔ Söz ile etiketleme işlemi durduruldu",
                     buttons=(
