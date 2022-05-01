@@ -1,9 +1,9 @@
 #################################
-# mentionall Tagger Bot #
+# Electro Tagger Bot #
 #################################
-# Repo Sahibi - mutsuz_panda 
-# Telegram - t.me/Richard_Ramirezz
-# Telegram - t.me/mutsuz_panda 
+#  Sahib - @HuseynH 
+# Reponu Öz Adına Çıxaran Peysərdi
+# Reponu Açığ Görüm Oğurlama Oğlum
 ##################################
 import heroku3
 import random
@@ -23,7 +23,6 @@ LOGGER = logging.getLogger(__name__)
 
 
 anlik_calisan = []
-gece_tag = []
 
 
 #tektag
@@ -42,11 +41,11 @@ async def start(event):
      await client.send_message(log_qrup, f"ℹ️ **Yeni Kullanıcı -** {ad}")
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("🎛 Komutlar", data="komutlar")
+                       Button.inline("✍ Əmrlər", data="help")
                       ],
-                      [Button.url('🌱 Beni Gruba Ekle', f'https://t.me/{USERNAME}?startgroup=a')],
-                      [Button.url('📣 Support', f'https://t.me/{support}'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
+                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
+                      [Button.url('📣 Kanal', f'https://t.me/{support}'),
+                       Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
 
@@ -61,16 +60,16 @@ async def handler(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("🎛 Komutlar", data="komutlar")
+                       Button.inline("✍ Əmrlər", data="help")
                       ],
                       [Button.url('🌱 Beni Gruba Ekle', f'https://t.me/{USERNAME}?startgroup=a')],
-                      [Button.url('📣 Support', f'https://t.me/{support}'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
+                      [Button.url('📣 Kanal', f'https://t.me/{support}'),
+                       Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
 
 # gece kusu
-@client.on(events.callbackquery.CallbackQuery(data="komutlar"))
+@client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
     await event.edit(f"{komutlar}", buttons=(
                       [
@@ -80,7 +79,7 @@ async def handler(event):
                     link_preview=False)
 
 # 5 li etiketleme modulü
-@client.on(events.NewMessage(pattern="^/utag ?(.*)"))
+@client.on(events.NewMessage(pattern="^/tag ?(.*)"))
 async def mentionall(event):
   global gece_tag
   if event.is_private:
