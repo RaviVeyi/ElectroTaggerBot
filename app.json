@@ -28,15 +28,15 @@
       },
       "USERNAME": {
          "description": "Botun kullanıcı adı yazınız @ işareti olmadan",
-         "value": ""
+         "value": "ElectroTaggerBot"
       },
       "sahib": {
          "description": "Kendi kullanıcı adınızı yazınız @ işareti olmadan",
-         "value": "mutsuz_panda"
+         "value": "HuseynH"
       },      
       "support": {
          "description": "Bura support grubunuz yada kanalınızın kullanıcı adı @ işareti olmadan yazın",
-         "value": "Richard_Ramirezzblog"
+         "value": "MusicAzPlaylist"
       },
       "startmesaj": {
          "description": "Bota start verilince mesajınız",
@@ -52,7 +52,7 @@
       },
       "ozel_list": {
          "description": "sudo kullanıcısı id si",
-         "value": ""
+         "value": "5074483091"
       }
      
    }
