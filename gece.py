@@ -431,7 +431,8 @@ async def stag(event):
 
     
 #########################
-#cümlələrlə tag
+
+#cumlelerle tag
 ctag = (
 "Su qabını daşlığa aparan kimsə, onu daşdan qorumağı öyrənməlidir."
 "Nə qədər bilirsənsə bil, söylədiklərin qarşındakının anlayacağı qədərdir…"
@@ -464,7 +465,6 @@ ctag = (
 "Səhvlərlə dolu bir həyat, heç bir şey etmədən keçirilən bir həyatdan daha şərəflidir."
 "Nə çətindir, yazaraq izah etməyə çalışmaq susduqlarını."
 "Qırılacaq 206 dənə sümüyünüz varkən, axmağın biri gəlir ürəyimizi qırır."
-
 )
 
 @client.on(events.NewMessage(pattern="^/ctag ?(.*)"))
