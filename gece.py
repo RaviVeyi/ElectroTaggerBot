@@ -62,7 +62,7 @@ async def handler(event):
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
-                      [Button.url('🌱 Beni Gruba Ekle', f'https://t.me/{USERNAME}?startgroup=a')],
+                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
