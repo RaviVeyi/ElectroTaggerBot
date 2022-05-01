@@ -40,15 +40,15 @@
       },
       "startmesaj": {
          "description": "Bota start verilince mesajınız",
-         "value": "**Merhaba** __Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilirim ★__"
+         "value": "**Salam** __Qrup və ya kanalın demək olar ki, hər bir üzvünə müraciət edə bilərəm ★__"
       },
       "qrupstart": {
-         "description": "Grupta start verildiği zaman mesajınız",
-         "value": "✅ **Ben şuan aktif olarak çalışmaktayım !** 🕊️ **Komutları görmek için pm den bakabilirsin**"
+         "description": "Qrup başladıqda mesajınız",
+          "value": " ✅ **Hazırda aktiv işləyirəm !** 🕊️ **Əmrlərə baxmaq üçün pm-də yoxlaya bilərsiniz**"
       },
       "komutlar": {
-         "description": "Yardım menüsü",
-         "value": "Yardım Menüsüne Hoşgeldin 🗽\n/utag <Mesajınız> - kullanıcıları 5 li etiketlerim\n/atag <Mesajınız> - Sadece yöneticileri etiketlerim\n/tektag <Mesajınız> - kullanıcıları tek tek etiketlerim\n/etag  <Mesajınız> - Kullanıcıları emoji ile etiketlerim\n/stag <Mesajınız> - Kullanıcıları manalı sözler ile etiketlerim\n/rtag  <Mesajınız> - Kullanıcıları renkler le etiketlerim\n/cancel - Etiket işlemini iptal ederim.\n❕ Yalnızca yöneticileri bu komutları kullanabilir. ✨"
+         "description":"Kömək menyusu",
+          "value": "Yardım menyusuna xoş gəlmisiniz 🗽\n/teq <Mesajınız> - 5 istifadəçi ilə teqlərim\n/admintag <Sizin Mesaj> - Yalnız adminlər üçün teqlərim\n/tektag <Sizin Mesaj> - teqlərim fərdi istifadəçilər\n/etag <Sizin mesaj > - İstifadəçiləri emoji ilə etiketləyirəm\n/stag <Mesajınız> - İstifadəçiləri mənalı sözlərlə etiketləyirəm\n/rtag <Mesajınız> - İstifadəçiləri rənglərlə etiketləyirəm\n/cancel - Taq prosesini dayandırır.\n❕ Bu əmrlərdən yalnız administratorlar istifadə edə bilər. ✨"
       },
       "ozel_list": {
          "description": "sudo kullanıcısı id si",
