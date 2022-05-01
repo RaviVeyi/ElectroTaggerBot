@@ -444,7 +444,7 @@ async def stag(event):
 "Qəribədir insan, eyni zarafata dəfələrlə gülməz amma eyni acıya dəfələrlə ağlayar."
 "Bir gün ürəyincə yaşamaq yüz il sürünə sürünə yaşamaqdan yaxşıdır. "
 "Dünya hamıya çatacaq qədər böyükdür. Başqasının yerini tutmağa çalışmaqdansa, öz yerin haqqında fikirləş."
-"Heç bir şey yolunda getmir əslində, sadəcə mən görməməzliyə vururam.""
+"Heç bir şey yolunda getmir əslində, sadəcə mən görməməzliyə vururam."
 "Əhəmiyyətsiz saydığımız ən adi hadisələr bəzən həyatımızı cəhənnəmə döndərə bilər."
 "Bəzən düşünmədən yaşamaq lazımdır, bəzən də yaşadıqlarını düşünməmək..."
 "Məsafələr, sevməyi bacarmayanların bəhanəsidir..."
@@ -461,7 +461,6 @@ async def stag(event):
 "Çox incidildiyimdə artıq sadəcə mən öyrəşmişəm deyirəm.🥺"
 "Yaxşı sevgilim deyilsən, amma bu səni sevmədiyim, qısqanmadığım, darıxmadığım anlamına gəlməz, gələ bilməz."
 "Səhvlərlə dolu bir həyat, heç bir şey etmədən keçirilən bir həyatdan daha şərəflidir."
-
 "Nə çətindir, yazaraq izah etməyə çalışmaq susduqlarını."
 "Qırılacaq 206 dənə sümüyünüz varkən, axmağın biri gəlir ürəyimizi qırır."
 
