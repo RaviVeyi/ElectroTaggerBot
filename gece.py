@@ -477,7 +477,7 @@ async def stag(event):
 
 
 @client.on(events.NewMessage(pattern="^/ctag ?(.*)"))
-async def stag(event):
+async def ctag(event):
   global gece_tag
   if event.is_private:
     return await event.respond(f"{noqrup}")
