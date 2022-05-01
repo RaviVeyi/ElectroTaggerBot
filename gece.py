@@ -432,7 +432,39 @@ async def stag(event):
     
 #########################
 #cümlələrlə tag
+   "Öncə çalışın, sonra dincəlin (Puşkin)
+"Su qabını daşlığa aparan kimsə, onu daşdan qorumağı öyrənməlidir."
+"Nə qədər bilirsənsə bil, söylədiklərin qarşındakının anlayacağı qədərdir…"
+"bayaqdan səni gözləyirəm hardasan😒"
+"Təəssüf ki, sən dəlisən, anormalsan, başın çatmır. Amma sənə bir sirr verim, yaxşı insanların çoxu elə olur"
+"O qədərini də etməz deyə düşündüyüm hər kəs, tam olaraq da o qədərini etdi"
+"Insanlar onlarsız necə xoşbəxt olduğunu görəndə, sənin üçün darıxmağa başlayacaqlar.."
+"Eşqlə əlaqədar ən böyük istehza: doğru insanı səhv zamanda sevmək"
+"Kişilər gözəl qadınları sevərlər, amma qadınlar sevdikləri adamı yaraşıqlı hesab edərlər."
+"Ətir sevmirəm, heç də ehtiyac duymadım. Çünki mənə görə ən gözəl qoxu, sevdiyinə sarıldıqdan sonra üstündə qalan qoxudur.."
+"Qəribədir insan, eyni zarafata dəfələrlə gülməz amma eyni acıya dəfələrlə ağlayar."
+"Bir gün ürəyincə yaşamaq yüz il sürünə sürünə yaşamaqdan yaxşıdır. "
+"Dünya hamıya çatacaq qədər böyükdür. Başqasının yerini tutmağa çalışmaqdansa, öz yerin haqqında fikirləş."
+"Heç bir şey yolunda getmir əslində, sadəcə mən görməməzliyə vururam.""
+"Əhəmiyyətsiz saydığımız ən adi hadisələr bəzən həyatımızı cəhənnəmə döndərə bilər."
+"Bəzən düşünmədən yaşamaq lazımdır, bəzən də yaşadıqlarını düşünməmək..."
+"Məsafələr, sevməyi bacarmayanların bəhanəsidir..."
+"Birini sevməyə başlamaq başlı başına bir iş, bir cəhddir. Güc istər, ürək istər, korluq istər. Hətta başlanğıcda elə bir an vardır ki uçurumun üstündən sıçramaq istər; düşünməyə çalışsan aşa bilməzsən onu."
+"Səni sevəni sevmək özünə vurğunluqdur. Səni sevməyəni sevmək, bax bu məhəbbətdir..."
+"Könül almağı bacarmayana ömür əmanət edilməz."
+"Bu gözəl həyat təkcə bizim deyil. Bu həqiqəti anlayıb başqalarına ziyan vermədən yaşamağı öyrənməliyik. "
+"İncitmək istəmədiyim üçün susuram verecek cavabım yoxdu sanır."
+"Mən sənə oyandım yenə, sən başqalarıyla yatarkən ..."
+"Bilərəm, gedənlə ölünməz amma qalanlarla da yaşanmır."
+"Qəlbinin nə qədər qırıldığından çox kimin qırdığı incidir insanı."
+"Əsəbləşəndə susmağı öyrəndiyim gündən bəri yetkin biriyəm."
+"Yaxşı davranan kişiləri ya tərk edərlər, ya da aldadırlar."
+"Çox incidildiyimdə artıq sadəcə mən öyrəşmişəm deyirəm.🥺"
+"Yaxşı sevgilim deyilsən, amma bu səni sevmədiyim, qısqanmadığım, darıxmadığım anlamına gəlməz, gələ bilməz."
+"Səhvlərlə dolu bir həyat, heç bir şey etmədən keçirilən bir həyatdan daha şərəflidir."
 
+"Nə çətindir, yazaraq izah etməyə çalışmaq susduqlarını."
+"Qırılacaq 206 dənə sümüyünüz varkən, axmağın biri gəlir ürəyimizi qırır."
 
 
 
@@ -497,16 +529,6 @@ async def stag(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
-
-
-
-
-
-
-
-
-
-
     
 #########################
 
