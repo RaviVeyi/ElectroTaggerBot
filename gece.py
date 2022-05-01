@@ -376,7 +376,7 @@ soz = (
 ) 
 
 
-@client.on(events.NewMessage(pattern="^/ttag ?(.*)"))
+@client.on(events.NewMessage(pattern="^/stag ?(.*)"))
 async def stag(event):
   global gece_tag
   if event.is_private:
