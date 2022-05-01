@@ -432,7 +432,6 @@ async def stag(event):
     
 #########################
 #cümlələrlə tag
-   "Öncə çalışın, sonra dincəlin (Puşkin)
 "Su qabını daşlığa aparan kimsə, onu daşdan qorumağı öyrənməlidir."
 "Nə qədər bilirsənsə bil, söylədiklərin qarşındakının anlayacağı qədərdir…"
 "bayaqdan səni gözləyirəm hardasan😒"
