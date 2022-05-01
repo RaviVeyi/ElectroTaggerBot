@@ -23,6 +23,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 anlik_calisan = []
+gece_tag = []
 
 
 #tektag
