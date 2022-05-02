@@ -18,6 +18,7 @@ client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 #
 USERNAME = os.environ.get("USERNAME")
 log_qrup = int(os.environ.get("LOG_QRUP"))
+log_channel = int(os.environ.get("LOG_CHANNEL"))
 startmesaj = os.environ.get("startmesaj")
 komutlar = os.environ.get("komutlar")
 qrupstart = os.environ.get("qrupstart")
