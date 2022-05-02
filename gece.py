@@ -23,6 +23,7 @@ LOGGER = logging.getLogger(__name__)
 
 
 anlik_calisan = []
+
 gece_tag = []
 
 
@@ -45,6 +46,8 @@ async def start(event):
                        Button.inline("✍ Əmrlər", data="help")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
+                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}'),
+                       Button.url  
                       [Button.url('📣 Kanal', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
