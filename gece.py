@@ -47,7 +47,6 @@ async def start(event):
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                      [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}'),
-                       Button.url  
                       [Button.url('📣 Kanal', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
