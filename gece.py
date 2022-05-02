@@ -13,7 +13,7 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
-from config import client, USERNAME, log_qrup, startmesaj, qrupstart, komutlar, sahib, support
+from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group
 
 logging.basicConfig(
     level=logging.INFO,
@@ -40,8 +40,7 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}")
-     return await event.reply(f"{ad} {startmesaj}", buttons=(
+     await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],

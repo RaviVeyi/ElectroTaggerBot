@@ -8,7 +8,7 @@
          "mutsuz_panda",
          "Richard_Ramirezzblog"
       ],   
-   "repository": "https://github.com/Gecekus/mentionall",
+   "repository": "https://github.com/Gecekus/ElectroTaggerBot",
    "env": {
       "TOKEN": {
          "description": "Botunuzun tokenini bura yazın",
@@ -20,10 +20,6 @@
       },
       "API_HASH": {
          "description": "my.telegram.org adresindən API HASH alın",
-         "value": ""
-      },    
-      "LOG_QRUP": {
-         "description": "log grubun id si",
          "value": ""
       },
       "USERNAME": {
@@ -38,7 +34,7 @@
          "description": "Bura support grubunuz yada kanalınızın kullanıcı adı @ işareti olmadan yazın",
          "value": "MusicAzPlaylist"
       },      
-      "channel": {
+      "group": {
          "description": "Bura grubunuz yada kanalınızın kullanıcı adı @ işareti olmadan yazın",
          "value": "MusicAz"
       },
