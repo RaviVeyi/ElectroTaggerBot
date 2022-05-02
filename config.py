@@ -18,8 +18,9 @@ client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 #
 USERNAME = os.environ.get("USERNAME")
 log_qrup = int(os.environ.get("LOG_QRUP"))
-log_channel = int(os.environ.get("LOG_CHANNEL"))
+admin_qrup = int(os.environ.get("ADMIN_QRUP"))
 startmesaj = os.environ.get("startmesaj")
+qrup = os.environ.get("group")
 komutlar = os.environ.get("komutlar")
 qrupstart = os.environ.get("qrupstart")
 support = os.environ.get("support")
@@ -32,6 +33,3 @@ app = Client("GUNC",
              bot_token=bot_token
              )
 
-# mutsuz_panda 
-# mutsuz_panda 
-# mutsuz_panda 
