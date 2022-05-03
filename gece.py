@@ -72,6 +72,9 @@ async def handler(event):
                     ),
                     link_preview=False)
 
+@client.on(events.NewMessage(pattern="^/help$"))
+async def help(event):
+  helptext = "**🌀 ElectroTaggerBot Əmrləri**\n\n**/tag <səbəb> - 5-li Tağ Edər**\n\n**/etag <səbəb> - Emoji ile tağ edər**\n\n**/tektag səbəb -  Tək Tək tağ edər**\n\n**/admins səbəb - Adminləri tağ edər**\n\n**/start - botu başladır**"
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
@@ -600,6 +603,6 @@ async def rtag(event):
 ###############################
 
 
-print(">> Bot çalışmaktadur merak etme 🚀 @mutsuz_panda bilgi alabilirsin <<")
+print(">> Bot Super İşləyir 😎 <<")
 client.run_until_disconnected()
 run_until_disconnected()
