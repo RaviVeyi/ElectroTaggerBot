@@ -331,15 +331,15 @@ async def etag(event):
 
 #cumlelerle tag
 cumle = (
-"Su qabını daşlığa aparan kimsə, onu daşdan qorumağı öyrənməlidir."
-"Nə qədər bilirsənsə bil, söylədiklərin qarşındakının anlayacağı qədərdir…"
+'Su qabını daşlığa aparan kimsə, onu daşdan qorumağı öyrənməlidir.',
+'Nə qədər bilirsənsə bil, söylədiklərin qarşındakının anlayacağı qədərdir…',
 "bayaqdan səni gözləyirəm hardasan😒"
 "Təəssüf ki, sən dəlisən, anormalsan, başın çatmır. Amma sənə bir sirr verim, yaxşı insanların çoxu elə olur"
 "O qədərini də etməz deyə düşündüyüm hər kəs, tam olaraq da o qədərini etdi"
 "Insanlar onlarsız necə xoşbəxt olduğunu görəndə, sənin üçün darıxmağa başlayacaqlar.."
 "Eşqlə əlaqədar ən böyük istehza: doğru insanı səhv zamanda sevmək"
 "Kişilər gözəl qadınları sevərlər, amma qadınlar sevdikləri adamı yaraşıqlı hesab edərlər."
-"Ətir sevmirəm, heç də ehtiyac duymadım. Çünki mənə görə ən gözəl qoxu, sevdiyinə sarıldıqdan sonra üstündə qalan qoxudur.."
+"Ətir sevmirəm, heç də ehtiyac duymadım.Çünki mənə görə ən gözəl qoxu, sevdiyinə sarıldıqdan sonra üstündə qalan qoxudur.."
 "Qəribədir insan, eyni zarafata dəfələrlə gülməz amma eyni acıya dəfələrlə ağlayar."
 "Bir gün ürəyincə yaşamaq yüz il sürünə sürünə yaşamaqdan yaxşıdır. "
 "Dünya hamıya çatacaq qədər böyükdür. Başqasının yerini tutmağa çalışmaqdansa, öz yerin haqqında fikirləş."
@@ -363,6 +363,7 @@ cumle = (
 "Nə çətindir, yazaraq izah etməyə çalışmaq susduqlarını."
 "Qırılacaq 206 dənə sümüyünüz varkən, axmağın biri gəlir ürəyimizi qırır."
 )
+
 
 @client.on(events.NewMessage(pattern="^/ctag ?(.*)"))
 async def ctag(event):
