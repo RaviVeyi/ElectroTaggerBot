@@ -146,13 +146,13 @@ async def mentionall(event):
 async def mentionalladmin(event):
   global gece_tag
   if event.is_private:
-    return await event.respond(f"{noqrup}")
+    return await event.respond(f"😡 Bu Əmri Qrupda İşlət")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond(f"{noadmin}")
+    return await event.respond(f"Sən Admin Deyilsən 🤣")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
