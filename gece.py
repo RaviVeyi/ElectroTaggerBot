@@ -571,7 +571,7 @@ async def rtag(event):
 ###############################
 
 # Animasita
-@register(outgoing=True, pattern="^/sev ?(.*)"))) async def merkurkedissa(event): if event.fwd_from: return animation_interval = 0.8 animation_ttl = range(0,37) await event.edit("`Kraliçam ❤️`") animation_chars = [ 
+@client.on(outgoing=True, pattern="^/sev ?(.*)"))) async def merkurkedissa(event): if event.fwd_from: return animation_interval = 0.8 animation_ttl = range(0,37) await event.edit("`Kraliçam ❤️`") animation_chars = [ 
 
 "❤️S❤️", "❤️Sə❤️", "❤️Sən❤️", "❤️Səni❤️", "❤️Səni ❤️", "❤️Səni d❤️", "❤️Səni da❤️", "❤️Səni dai❤️", "❤️Səni daim❤️", "❤️Səni daim ❤️", "❤️Səni daim y❤️", "❤️Səni daim ya❤️", "❤️Səni daim yan❤️", "❤️Səni daim yanı❤️", "❤️Səni daim yanım❤️", "❤️Səni daim yanımd❤️", "❤️Səni daim yanımda❤️", "❤️Səni daim yanımda ❤️", "❤️Səni daim yanımda o❤️", "❤️Səni daim yanımda ol❤️", "❤️Səni daim yanımda olm❤️", "❤️Səni daim yanımda olma❤️", "❤️Səni daim yanımda olmağ❤️", "❤️Səni daim yanımda olmağı❤️", "❤️Səni daim yanımda olmağın❤️", "❤️Səni daim yanımda olmağını❤️", "❤️Səni daim yanımda olmağını ❤️", "❤️Səni daim yanımda olmağını i❤️", "❤️Səni daim yanımda olmağını is❤️", "❤️Səni daim yanımda olmağını ist❤️", "❤️Səni daim yanımda olmağını istə❤️", "❤️Səni daim yanımda olmağını istəy❤️", "❤️Səni daim yanımda olmağını istəyi❤️", "❤️Səni daim yanımda olmağını istəyir❤️", "❤️Səni daim yanımda olmağını istəyirə❤️", "❤️Səni daim yanımda olmağını istəyirəm❤️", "**MƏNİMLƏ SEVGİLİ OLARSAN ÜRƏYİM ? ❤️**", ]
 
