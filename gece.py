@@ -414,6 +414,21 @@ async def ctag(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
+ 
+ #########################
+ 
+# şəhid adları ilə tağ Allah bütün Şəhidlərimizə Rəhmət Eləsin
+
+sehidler = "Abdullayev Qəzənfər Nəcəf Abdullayev Nurlan İnqilab Abdullayev Nicat Mirnəbi Abdullayev Məhəmməd Ramazan Allahverənov Telman Fazil Alıyev Qələndər Nofəl Abdullayev İbrahim Habil Abdullayev Elşən Sabir Abdullayev Həsən Qərib󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳󠁿".split(" ")
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
     
 #########################
 
