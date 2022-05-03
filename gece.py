@@ -327,7 +327,7 @@ async def etag(event):
 #########################
 
 #cumlelerle tag
-ctag = (
+cumle = (
 "Su qabını daşlığa aparan kimsə, onu daşdan qorumağı öyrənməlidir."
 "Nə qədər bilirsənsə bil, söylədiklərin qarşındakının anlayacağı qədərdir…"
 "bayaqdan səni gözləyirəm hardasan😒"
@@ -399,7 +399,7 @@ async def ctag(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(ctag)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(cumle)}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
         await event.respond("⛔ Söz ile etiketleme işlemi durduruldu",
                     buttons=(
