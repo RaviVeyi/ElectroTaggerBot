@@ -30,7 +30,7 @@
          "description": "Kendi kullanıcı adınızı yazınız @ işareti olmadan",
          "value": "HuseynH"
       },
-      "LOG_GROUP": {
+      "log_qrup": {
          "description": "grup idsi",
          "value": "-1001799878151"
       },      
