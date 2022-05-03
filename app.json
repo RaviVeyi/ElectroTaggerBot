@@ -42,6 +42,10 @@
          "description": "Bota start verilince mesajınız",
          "value": "**Salam** __Qrup və ya kanalın demək olar ki, hər bir üzvünə müraciət edə bilərəm ★__"
       },
+      "noadmin": {
+         "description": "əldəymə",
+          "value": " ✅ **Sən Admin Deyilsən**"
+      },
       "qrupstart": {
          "description": "Qrup başladıqda mesajınız",
           "value": " ✅ **Hazırda aktiv işləyirəm !** 🕊️ **Əmrlərə baxmaq üçün pm-də yoxlaya bilərsiniz**"
