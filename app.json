@@ -46,6 +46,10 @@
          "description": "əldəymə",
           "value": " ✅ **Sən Admin Deyilsən**"
       },
+      "nogroup": {
+         "description": "grupda işlət",
+          "value": " ✅ **Məni grupda istifade et**"
+      },
       "qrupstart": {
          "description": "Qrup başladıqda mesajınız",
           "value": " ✅ **Hazırda aktiv işləyirəm !** 🕊️ **Əmrlərə baxmaq üçün pm-də yoxlaya bilərsiniz**"
