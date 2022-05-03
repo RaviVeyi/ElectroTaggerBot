@@ -419,10 +419,10 @@ async def ctag(event):
  
 # şəhid adları ilə tağ Allah bütün Şəhidlərimizə Rəhmət Eləsin
 
-sehidler = "Abdullayev Qəzənfər Nəcəf Abdullayev Nurlan İnqilab Abdullayev Nicat Mirnəbi Abdullayev Məhəmməd Ramazan Allahverənov Telman Fazil Alıyev Qələndər Nofəl Abdullayev İbrahim Habil Abdullayev Elşən Sabir Abdullayev Həsən Qərib󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳󠁿".split(" ")
+sehid = "Abdullayev Qəzənfər Nəcəf Abdullayev Nurlan İnqilab Abdullayev Nicat Mirnəbi Abdullayev Məhəmməd Ramazan Allahverənov Telman Fazil Alıyev Qələndər Nofəl Abdullayev İbrahim Habil Abdullayev Elşən Sabir Abdullayev Həsən Qərib󠁧󠁢󠁷󠁬󠁳󠁿󠁧󠁢󠁷󠁬󠁳󠁿".split(" ")
  
 @client.on(events.NewMessage(pattern="^/sehid ?(.*)"))
-async def ctag(event):
+async def sehid(event):
   global gece_tag
   if event.is_private:
     return await event.respond(f"{noqrup}")
@@ -459,7 +459,7 @@ async def ctag(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(ctag)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(sehid)}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
         await event.respond("⛔ Söz ile etiketleme işlemi durduruldu",
                     buttons=(
@@ -519,7 +519,7 @@ async def btag(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(bayraq)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(bayrag)}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
         await event.respond("⛔ Bayraq  larla Tağ Pr Dayandırıldı",
                     buttons=(
