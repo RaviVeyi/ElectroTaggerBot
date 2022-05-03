@@ -29,6 +29,10 @@
       "sahib": {
          "description": "Kendi kullanıcı adınızı yazınız @ işareti olmadan",
          "value": "HuseynH"
+      },
+      "LOG_GROUP": {
+         "description": "grup idsi",
+         "value": "-1001799878151"
       },      
       "support": {
          "description": "Bura support grubunuz yada kanalınızın kullanıcı adı @ işareti olmadan yazın",
