@@ -54,7 +54,7 @@ async def start(event):
 
 
   if event.is_group:
-    return await client.send_message(event.chat_id, f"{qrupstart}")
+    return await client.send_message(event.chat_id, f"-1001799878151")
 
 # Başlanğıc Button
 @client.on(events.callbackquery.CallbackQuery(data="start"))
