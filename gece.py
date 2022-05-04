@@ -87,13 +87,13 @@ async def handler(event):
 async def mentionall(event):
   global gece_tag
   if event.is_private:
-    return await event.respond(f"{noqrup}")
+    return await event.respond(f"😡 Bu Əmri Qrupda İşlət")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond(f"{noadmin}")
+    return await event.respond(f"Sən Admin Deyilsən 🤣")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -205,13 +205,13 @@ async def mentionalladmin(event):
 async def tektag(event):
   global gece_tag
   if event.is_private:
-    return await event.respond(f"{noqrup}")
+    return await event.respond(f"😡 Bu Əmri Qrupda İşlət")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond(f"{noadmin}")
+    return await event.respond(f"Sən Admin Deyilsən 🤣")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -274,13 +274,13 @@ emoji = "🐵 🦁 🐯 🐱 🐶 🐺 🐻 🐨 🐼 🐹 🐭 🐰 🦊 🦝 �
 async def etag(event):
   global gece_tag
   if event.is_private:
-    return await event.respond(f"{noqrup}")
+    return await event.respond(f"😡 Bu Əmri Qrupda İşlət")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond(f"{noadmin}")
+    return await event.respond(f"Sən Admin Deyilsən 🤣")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -337,13 +337,13 @@ cumle = (
 async def ctag(event):
   global gece_tag
   if event.is_private:
-    return await event.respond(f"{noqrup}")
+    return await event.respond(f"😡 Bu Əmri Qrupda İşlət")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond(f"{noadmin}")
+    return await event.respond(f"Sən Admin Deyilsən 🤣")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -397,13 +397,13 @@ sehid = "Abdullayev Qəzənfər Nəcəf Abdullayev Nurlan İnqilab Abdullayev Ni
 async def sehid(event):
   global gece_tag
   if event.is_private:
-    return await event.respond(f"{noqrup}")
+    return await event.respond(f"😡 Bu Əmri Qrupda İşlət")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond(f"{noadmin}")
+    return await event.respond(f"Sən Admin Deyilsən 🤣")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -457,13 +457,13 @@ bayrag = "🇦🇨 🇦🇩 🇦🇪 🇦🇫 🇦🇬 🇦🇮 🇦🇱 🇦�
 async def btag(event):
   global gece_tag
   if event.is_private:
-    return await event.respond(f"{noqrup}")
+    return await event.respond(f"😡 Bu Əmri Qrupda İşlət")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond(f"{noadmin}")
+    return await event.respond(f"Sən Admin Deyilsən 🤣")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -518,13 +518,13 @@ renk = "🔴 🟠 🟡 🟢 🔵 🟣 🟤 ⚫ ⚪ " .split(" ")
 async def rtag(event):
   global gece_tag
   if event.is_private:
-    return await event.respond(f"{noqrup}")
+    return await event.respond(f"😡 Bu Əmri Qrupda İşlət")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond(f"{noadmin}")
+    return await event.respond(f"Sən Admin Deyilsən 🤣")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
