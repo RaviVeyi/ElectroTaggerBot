@@ -81,6 +81,35 @@ async def handler(event):
                     ),
                     link_preview=False)
 
+#help
+
+@client.on(events.NewMessage)
+async def yeni_mesaj(event: events.NewMessage.Event):
+  global mesaj
+  if event.is_private:
+    mesaj = str(event.raw_text)
+    if not mesaj == "/start":
+      await client.send_message(event.chat_id, f"{etirafmsg}", buttons=(
+                      [
+                      Button.inline("🔒 Anonim", data="anonim"),
+                      Button.inline("🌟 Açıq", data="aciq")
+                      ],
+                      [
+                      Button.inline("🏠 Ana Səhifə", data="start")
+                      ]
+                    ),
+                    link_preview=False)
+                    
+
+
+
+
+
+
+
+
+
+
 # 5 li etiketleme modulü
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
 async def mentionall(event):
