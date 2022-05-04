@@ -75,7 +75,12 @@ async def handler(event):
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
-    await event.edit(f"{komutlar}", buttons=(
+    async for usr in client
+      buttons=(
+                      [
+                       Button.inline("✍ Əmrlər", data="help")
+async def handler(event):
+    await event.edit(f"{əmrlər}",     buttons=(
                       [
                       Button.inline("◀️ Geri", data="start")
                       ]
