@@ -595,18 +595,9 @@ async def rtag(event):
         usrtxt = ""
 
 
-import os, youtube_dl, requests, time
-from youtube_search import YoutubeSearch
-from pyrogram.handlers import MessageHandler
-from pyrogram import Client, filters
-import yt_dlp
-from pyrogram.types import (
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    Message
-)
 
 ###############################
+
 
 print(">> Bot Super İşləyir 😎 <<")
 client.run_until_disconnected()
