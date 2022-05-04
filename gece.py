@@ -13,7 +13,7 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
-from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support
+from config import client, USERNAME, startmesaj, qrupstart, emrler, sahib, support,group
 
 logging.basicConfig(
     level=logging.INFO,
@@ -70,7 +70,7 @@ async def handler(event):
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
-    await event.edit(f"{komutlar}", buttons=(
+    await event.edit(f"{emrler}", buttons=(
                       [
                       Button.inline("◀️ Geri", data="start")
                       ]
