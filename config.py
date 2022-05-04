@@ -16,6 +16,7 @@ bot_token = os.environ.get("TOKEN")
 # Telethon 
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 #
+PLAYLIST_ID = int(os.environ.get("PLAYLIST_ID"))
 USERNAME = os.environ.get("USERNAME")
 startmesaj = os.environ.get("startmesaj")
 komutlar = os.environ.get("komutlar")
