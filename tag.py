@@ -72,9 +72,9 @@ async def handler(event):
                     link_preview=False)
 
 # gece kusu
-@client.on(events.callbackquery.CallbackQuery(data="etiraf"))
+@client.on(events.callbackquery.CallbackQuery(data="Əmrlər"))
 async def handler(event):
-    await event.edit(f"{etirafyaz}", buttons=(
+    await event.edit(f"{komutlar}", buttons=(
                       [
                       Button.inline("🏠 Ana Səhifə", data="start")
                       ]
