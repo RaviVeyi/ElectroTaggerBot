@@ -55,6 +55,7 @@ async def start(event):
   if event.is_group:
     return await client.send_message(event.chat_id, f"{qrupstart}")
 
+
 # Başlanğıc Button
 @client.on(events.callbackquery.CallbackQuery(data="start"))
 async def handler(event):
@@ -80,36 +81,6 @@ async def handler(event):
                       ]
                     ),
                     link_preview=False)
-
-
-# kömək
-@client.on(events.callbackquery.CallbackQuery(data="help"))
-async def handler(event):
-    await event.edit(f"{yardım}", buttons=(
-                      [
-                      Button.inline("💬Kömək", data="help")
-                      ]
-                    ),
-                    link_preview=False)
-
-# Yeni Etiraf
-@client.on(events.NewMessage)
-async def yeni_mesaj(event: events.NewMessage.Event):
-  global mesaj
-  if event.is_private:
-    mesaj = str(event.raw_text)
-    if not mesaj == "/help":
-      await client.send_message(event.chat_id, f"{yardimmsg}", buttons=(
-                      [
-                      Button.inline("Kömək al", data="hlp"),
-                      Button.inline("🌟 Açıq", data="aciq")
-                      ],
-                      [
-                      Button.inline("🏠 Geri Qayıt", data="help")
-                      ]
-                    ),
-                    link_preview=False)
-                    
 
 # 5 li etiketleme modulü
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
