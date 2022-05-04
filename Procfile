@@ -1,2 +1,1 @@
-bot: python3 gece.py
-worker: python3 song.py
+bot: python3 tag.py
