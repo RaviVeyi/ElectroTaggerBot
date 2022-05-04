@@ -13,53 +13,6 @@ from pyrogram.types import (
     Message
 )
 
-
-#start mesajı
-
-@bot.on_message(filters.command(['start']))
-def start(client, message):
-    demon = f'👋 **Salam** {message.from_user.mention}\n\n**ℹ️ Mən musiqi, video yükləmək üçün yaradılmış botam və istədiyiniz mahnının sözlərini məndən öyrənə bilərsiniz 😁**\n\n**✅ Botun istifadə qaydasını öyrənmək üçün** /help **əmrindən istifadə edin**'
-    message.reply_text(
-        text=demon, 
-        quote=False,
-        reply_markup=InlineKeyboardMarkup(
-            [[
-                    InlineKeyboardButton('Rəsmi Kanal ✅', url='https://t.me/MusicAzPlaylist'),
-                    InlineKeyboardButton('Playlist 🎵', url=f'https://t.me/{Config.PLAYLIST_NAME}')
-                  ],[
-                    InlineKeyboardButton('Sahib 👨🏻‍💻', url=f'T.me/{Config.BOT_OWNER}')
-                ]
-            ]
-        )
-    )
-    
-
- 
-#kömək mesajı
-
-@bot.on_message(filters.command(['help']))
-def help(client, message):
-    helptext = f'**Musiqi yükləmək üçün /song əmrindən istifadə edə bilərsiniz ⤵️**\n\n**Məsələn:**\n**1.** `/song Ayaz Babayev - Sən Mənlə`\n**2.** `/song https://youtu.be/qLXUa89Q5WI`\n\n**/alive - Botun işlək olduğunu yoxlamaq üçün əmrdir. Yalnız Bot sahibi istifadə edə bilər.**\n\n**⚠️ Botun qruplarda işləyə bilməsi üçün admin olmalıdır !**'
-    message.reply_text(
-        text=helptext, 
-        quote=False,
-        reply_markup=InlineKeyboardMarkup(
-            [[
-                    InlineKeyboardButton('Rəsmi Kanal ✅', url='https://t.me/MusicAzPlaylist'),
-                    InlineKeyboardButton('Playlist 🎵', url=f'https://t.me/{Config.PLAYLIST_NAME}')
-                  ],[
-                    InlineKeyboardButton('Sahib 👨🏻‍💻', url=f'T.me/{Config.BOT_OWNER}')
-                ]
-            ]
-        )
-    )
-
-#alive mesaji#
-
-@bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
-async def live(client: Client, message: Message):
-    livemsg = await message.reply_text('`Mən Qoz Kimi İşləyirəm 😎`')
-    
 #musiqi əmri#
 
 @bot.on_message(filters.command("song") & ~filters.edited)
