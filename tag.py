@@ -13,7 +13,7 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
-from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group, komutlar
+from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group, mesaj
 
 logging.basicConfig(
     level=logging.INFO,
@@ -72,14 +72,6 @@ async def handler(event):
                     link_preview=False)
 
 # gece kusu
-@client.on(events.callbackquery.CallbackQuery(data="help"))
-async def handler(event):
-    await event.edit(f"{komutlar}", buttons=(
-                      [
-                      Button.inline("◀️ Geri", data="start")
-                      ]
-                    ),
-                    link_preview=False)
 
 #help
 
@@ -89,13 +81,13 @@ async def yeni_mesaj(event: events.NewMessage.Event):
   if event.is_private:
     mesaj = str(event.raw_text)
     if not mesaj == "help":
-      await client.send_message(event.chat_id, f"{komutlar}", buttons=(
+      await client.send_message(event.chat_id, f"{mesaj}", buttons=(
                       [
-                      Button.inline("🔒 Anonim", data="anonim"),
+                      Button.inline("Əmrlər", data="help"),
                       Button.inline("🌟 Açıq", data="aciq")
                       ],
                       [
-                      Button.inline("🏠 Ana Səhifə", data="start")
+                      Button.inline("Bağla", data="back")
                       ]
                     ),
                     link_preview=False)
