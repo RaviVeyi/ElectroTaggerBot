@@ -3,7 +3,6 @@
 #Rəsmi Kanal t.me/Botsinator 
 
 import os, youtube_dl, requests, time
-from config import Config
 from youtube_search import YoutubeSearch
 from pyrogram.handlers import MessageHandler
 from pyrogram import Client, filters
