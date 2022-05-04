@@ -44,7 +44,7 @@
       },
       "qrupstart": {
          "description": "Qrup başladıqda mesajınız",
-          "value": " ✅ **Hazırda aktiv işləyirəm !** 🕊️ **Əmrlərə baxmaq üçün pm-də yoxlaya bilərsiniz**"
+          "value": " ✅ **Hazırda aktiv işləyirəm !** 🕊️ **Əmrlərə baxmaq üçün /help Yazın**"
       },
       "komutlar": {
          "description":"Kömək menyusu",
