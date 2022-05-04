@@ -40,7 +40,7 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     return await event.reply(f"{ad} {startmesaj}", buttons=(
+     await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}") {startmesaj}", buttons=(
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
@@ -50,6 +50,14 @@ async def start(event):
                        [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
+
+
+
+
+
+
+  if event.is_group:
+    return await client.send_message(event.chat_id, f"{qrupstart}")
 
 # Başlanğıc Button
 @client.on(events.callbackquery.CallbackQuery(data="start"))
@@ -76,6 +84,36 @@ async def handler(event):
                       ]
                     ),
                     link_preview=False)
+
+
+# kömək
+@client.on(events.callbackquery.CallbackQuery(data="help"))
+async def handler(event):
+    await event.edit(f"{etirafyaz}", buttons=(
+                      [
+                      Button.inline("🏠 Ana Səhifə", data="start")
+                      ]
+                    ),
+                    link_preview=False)
+
+# Yeni Etiraf
+@client.on(events.NewMessage)
+async def yeni_mesaj(event: events.NewMessage.Event):
+  global mesaj
+  if event.is_private:
+    mesaj = str(event.raw_text)
+    if not mesaj == "/help":
+      await client.send_message(event.chat_id, f"{etirafmsg}", buttons=(
+                      [
+                      Button.inline("🔒 Anonim", data="anonim"),
+                      Button.inline("🌟 Açıq", data="aciq")
+                      ],
+                      [
+                      Button.inline("🏠 Ana Səhifə", data="help")
+                      ]
+                    ),
+                    link_preview=False)
+                    
 
 # 5 li etiketleme modulü
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
