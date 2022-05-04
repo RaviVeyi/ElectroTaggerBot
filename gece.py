@@ -539,9 +539,6 @@ async def btag(event):
 # renk ile etiketleme modülü
 renk = "🔴 🟠 🟡 🟢 🔵 🟣 🟤 ⚫ ⚪ " .split(" ") 
         
-###############################
-
-#song
 
 @client.on(events.NewMessage(pattern="^/rtag ?(.*)"))
 async def rtag(event):
@@ -609,8 +606,10 @@ from pyrogram.types import (
     Message
 )
 
+###############################
+
 #musiqi əmri#
-@app.on_message(filters.command("song") & ~filters
+@client.on_message(filters.command("song") & ~filters
 def bul(_, message):
     query = " ".join(message.command[1:])
     m = message.reply("<b>Musiqi Axtarılır ... 🔍</b>")
