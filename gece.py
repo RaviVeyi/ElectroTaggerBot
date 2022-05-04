@@ -318,7 +318,29 @@ async def etag(event):
 #########################
 
 #cumlelerle tag
-cumle = (
+cumle = ( 
+  'Deyir:nə sayanın qulu nədə saymayanın ağasıyam...Allahın qulu☺❤sözümün də ağasıyam🤞🏻🖤',
+  'Kobud deyləm...sadəcə hörmətə hörmət cavaba da cavabdı😌🤞🏻',
+  'Xowbəxt bir qadını sevməyə nə var ki,Həyatından əlini üzmüw bir qadını sev və xowbəxt elə.!Bax onda deyərəm ki,sevməyi bacarır...!!😊💔',
+  '~♡BilsəYdim Ki , SəNi BeLə TeZ itirəcəm...💔Dostun olaraq param-parça Qalardım🤞🏻🖤🌚'
+  'Mən ağlarkən yanımda yoxsansa, mən gülərkən kölgə etmə.'
+  'Çoxlu qüsurları olan insanlar qüsurları ilk növbədə başqalarında görürlər.',
+  'Sözlər yarpaqlara bənzəyir, çoxlu yarpağı olan ağac az bəhrə verir. - Aleksandr Pop'
+  'Sevgi körpü qurmaqdır. İnsanlar körpü quracaqları yerdə, divar hördükləri üçün yalnızdırlar. - İsaak Nyuton'
+  'Qadının ən böyük cavahiratı onun namusudur. - Anatol Frans'
+  'Ağıl da, qəlb də eşq atəşinin qığılcımıdır. - Məhəmməd İqbal'
+  'Kasıb da olsa, bağışlamağı bacaran zəngin insandır. - Aristotel'
+  'Qorxunun qulu olmaq köləliyin ən dəhşətli növüdür.',
+  'Sən belə bilməzsən, gülüşün məndə neçə bahar edər.'
+  'Sənə necə davranmalarını istəyirsənsə, sən də başqalarına elə davran. Lakin, ilk yaxşı davranışı sən et.'
+  'Kimisi gözəlim deyər sevdiyinə kimisi də özəlim. Amma sevgi nə gözəllik istər, nə də özəllik. Sevgi sadəcə ürək istər!'
+  'Əvvəlki kimi olsa eşqlər.. Qız, sevdiyi kişinin əlini tutmağa utansa. Kişi sevdiyinin gözlərinə baxmağa qıya bilməsə.'
+'Anlamaq üçün dinləmirik, cavab vermək üçün dinləyirik.Ən böyük problemimiz də budur.'
+'Həyat bağıra bağıra susmağı öyrədir insana.'
+'Ya sevməyi bilmədik, ya da həddindən çox sevdik...'
+
+
+
 
  
 )
