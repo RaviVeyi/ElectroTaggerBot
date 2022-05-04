@@ -339,10 +339,6 @@ cumle = (
 'Həyat bağıra bağıra susmağı öyrədir insana.'
 'Ya sevməyi bilmədik, ya da həddindən çox sevdik...'
 
-
-
-
- 
 )
 
 
