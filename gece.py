@@ -484,7 +484,7 @@ async def btag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(bayrag)}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Bayraq  larla Tağ Pr Dayandırıldı",
+        await event.respond("⛔ Bayraq  larla Tağ Prosesi Dayandırıldı",
                     buttons=(
                       [
                        Button.url('📣 Support', f'https://t.me/{support}')
