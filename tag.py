@@ -76,7 +76,7 @@ async def handler(event):
 async def handler(event):
     await event.edit(f"{komutlar}", buttons=(
                       [
-                      Button.inline("🏠 Ana Səhifə", data="start")
+                      Button.inline("🙄Geri Qayıt", data="start")
                       ]
                     ),
                     link_preview=False)
