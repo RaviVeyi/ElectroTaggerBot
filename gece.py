@@ -85,9 +85,9 @@ async def handler(event):
 # kömək
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
-    await event.edit(f"{etirafyaz}", buttons=(
+    await event.edit(f"{yardım}", buttons=(
                       [
-                      Button.inline("🏠 Ana Səhifə", data="start")
+                      Button.inline("💬Kömək", data="help")
                       ]
                     ),
                     link_preview=False)
@@ -99,13 +99,13 @@ async def yeni_mesaj(event: events.NewMessage.Event):
   if event.is_private:
     mesaj = str(event.raw_text)
     if not mesaj == "/help":
-      await client.send_message(event.chat_id, f"{etirafmsg}", buttons=(
+      await client.send_message(event.chat_id, f"{yardimmsg}", buttons=(
                       [
-                      Button.inline("🔒 Anonim", data="anonim"),
+                      Button.inline("Kömək al", data="hlp"),
                       Button.inline("🌟 Açıq", data="aciq")
                       ],
                       [
-                      Button.inline("🏠 Ana Səhifə", data="help")
+                      Button.inline("🏠 Geri Qayıt", data="help")
                       ]
                     ),
                     link_preview=False)
