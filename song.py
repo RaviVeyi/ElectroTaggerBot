@@ -14,7 +14,7 @@ from pyrogram.types import (
 )
 
 #musiqi əmri#
-@bot.on_message(filters.command("song") & ~filters.edited)
+@app.on_message(filters.command("song") & ~filters
 def bul(_, message):
     query = " ".join(message.command[1:])
     m = message.reply("<b>Musiqi Axtarılır ... 🔍</b>")
