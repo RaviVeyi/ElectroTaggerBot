@@ -39,6 +39,8 @@ async def cancel(event):
 async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
+     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+     await client.send_message(log_qrup, f"ℹ️ **Yeni istifadəçi -** {ad}")
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
                        Button.inline("✍ Əmrlər", data="help")
@@ -49,8 +51,6 @@ async def start(event):
                        [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
-
-
 
 # Başlanğıc Button
 @client.on(events.callbackquery.CallbackQuery(data="start"))
