@@ -90,9 +90,6 @@ async def yeni_mesaj(event: events.NewMessage.Event):
     if not mesaj == "help":
       await client.send_message(event.chat_id, f"{komutlar}", buttons=(
                       [
-                      Button.inline("Əmrlər", data="help"),
-                      ],
-                      [
                       Button.inline("Geri Qayıt", data="start")
                       ]
                     ),
