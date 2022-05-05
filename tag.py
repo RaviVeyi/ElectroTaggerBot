@@ -74,7 +74,7 @@ async def handler(event):
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
-    await event.edit(f"{komut}", buttons=(
+    await event.edit(f"{komutlar}", buttons=(
                       [
                       Button.inline("🏠 Ana Səhifə", data="start")
                       ]
@@ -87,7 +87,7 @@ async def yeni_mesaj(event: events.NewMessage.Event):
   global mesaj
   if event.is_private:
     mesaj = str(event.raw_text)
-    if not mesaj == "help":
+    if not mesaj == "/Əmrlər":
       await client.send_message(event.chat_id, f"{komutlar}", buttons=(
                       [
                       Button.inline("🔒Əmrlər", data="help"),
