@@ -13,7 +13,7 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
-from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group, komut
+from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group, komutlar
 
 logging.basicConfig(
     level=logging.INFO,
@@ -87,8 +87,8 @@ async def yeni_mesaj(event: events.NewMessage.Event):
   global mesaj
   if event.is_private:
     mesaj = str(event.raw_text)
-    if not mesaj == "help":
-      await client.send_message(event.chat_id, f"{komut}", buttons=(
+    if not mesaj == "Əmrlər":
+      await client.send_message(event.chat_id, f"{komutlar}", buttons=(
                       [
                       Button.inline("🔒Əmrlər", data="help"),
                       Button.inline("🏠Geri", data="start")
