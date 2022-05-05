@@ -86,7 +86,7 @@ async def handler(event):
 async def yeni_mesaj(event: events.NewMessage.Event):
   global mesaj
   if event.is_private:
-    if not mesaj == "help":
+    if not mesaj == "/help":
       await client.send_message(event.chat_id, f"{komutlar}", buttons=(
                       [
                       Button.inline("Əmrlər", data="help"),
