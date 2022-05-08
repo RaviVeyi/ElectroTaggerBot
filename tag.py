@@ -85,19 +85,19 @@ async def handler(event):
 
 
 # Yeni Etiraf
-@client.on(events.callbackquery.CallbackQuery(data="help"))
-async def handler(event):
-      await client.send_message(eventawait event.edit(f"{komutlar}", buttons=(
-                      [
-                      Button.inline("🔒 Anonim", data="anonim"),
-                      Button.inline("🌟 Açıq", data="aciq")
-                      ],
-                      [
-                      Button.inline("🏠 Ana Səhifə", data="start")
-                      ]
-                    ),
-                    link_preview=False)
-                    
+@client.on(events.NewMessage(pattern="^/help$"))
+async def help(event):
+  helptext = "**Əmrlərim:\n\n/utag -text- Üyələri Çağıraram.\n/atag -text- Adminləri Çağıraram.\n/kanallar - Rəsmi Kanallarımız\n/cancel - Prosesi Dayandıraram .\n❕ Bu Əmrlərdən Yalnız Administratorlar İstifadə Edə bilər**"
+  await event.reply(helptext)
+
+@client.on(events.NewMessage())
+async def mentionalladmin(event):
+  global etiketuye
+  if event.is_group:
+    if event.chat_id in etiketuye:
+      pass
+    else:
+      etiketuye.append(event.chat_id)
 
 
 
