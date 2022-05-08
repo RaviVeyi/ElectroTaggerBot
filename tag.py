@@ -86,7 +86,6 @@ async def handler(event):
 
 # Yeni Etiraf
 @client.on(events.callbackquery)
-    komutlar = help(event.raw_text)
     .CallbackQuery(data="help"))
       await client.send_message(event.chat_id, f"{komutlar}", buttons=(
                       [
