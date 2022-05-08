@@ -12,15 +12,15 @@
    "env": {
       "TOKEN": {
          "description": "Botunuzun tokenini bura yazın",
-         "value": ""
+         "value": "5333112271:AAFhLv1kyqGVMARSbzBtMIoZPMAj-KfBV-I"
       },
       "APP_ID": {
          "description": "my.telegram.org adresindən APP ID alın.",
-         "value": ""
+         "value": "8953338"
       },
       "API_HASH": {
          "description": "my.telegram.org adresindən API HASH alın",
-         "value": ""
+         "value": "fe21f223cb02d8f7c1cbda651f553a45"
       },
       "USERNAME": {
          "description": "Botun kullanıcı adı yazınız @ işareti olmadan",
