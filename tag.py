@@ -85,10 +85,10 @@ async def handler(event):
 
 
 # Yeni Etiraf
-@client.on(events.callbackquery.CallbackQuery(data="help"))
-  if event.is_private:
-    mesaj = str(event.raw_text)
-      await client.send_message(event.chat_id, f"{komutlar}", buttons=(
+@client.on(events.NewMessage)
+async def yeni_mesaj(event: events
+    if not mesaj == "/help":
+      await client.send_message(eventawait event.edit(f"{komutlar}", buttons=(
                       [
                       Button.inline("🔒 Anonim", data="anonim"),
                       Button.inline("🌟 Açıq", data="aciq")
