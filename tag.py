@@ -88,7 +88,12 @@ async def handler(event):
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
   helptext = "**Əmrlərim:\n\n/utag -text- Üyələri Çağıraram.\n/atag -text- Adminləri Çağıraram.\n/kanallar - Rəsmi Kanallarımız\n/cancel - Prosesi Dayandıraram .\n❕ Bu Əmrlərdən Yalnız Administratorlar İstifadə Edə bilər**"
-  await event.reply(helptext)
+      await event.edit(f"{komutlar}", buttons=(
+                      [
+                      Button.inline("🏠 Ana Səhifə", data="start")
+                      ]
+                    ),
+                    link_preview=False)
 
 @client.on(events.NewMessage())
 async def mentionalladmin(event):
