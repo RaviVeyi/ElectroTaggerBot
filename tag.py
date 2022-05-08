@@ -85,9 +85,8 @@ async def handler(event):
 
 
 # Yeni Etiraf
-@client.on(events.NewMessage)
-async def yeni_mesaj(event: events
-    if not mesaj == "/help":
+@client.on(events.callbackquery.CallbackQuery(data="help"))
+async def handler(event):
       await client.send_message(eventawait event.edit(f"{komutlar}", buttons=(
                       [
                       Button.inline("🔒 Anonim", data="anonim"),
