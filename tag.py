@@ -77,13 +77,29 @@ async def handler(event):
 async def handler(event):
     await event.edit(f"{komutlar}", buttons=(
                       [
-                       Button.inline("Əmrlər", data="help")
+                      Button.inline("🏠 Ana Səhifə", data="start")
+                      ]
+                    ),
+                    link_preview=False)
+
+
+
+# Yeni Etiraf
+@client.on(events.callbackquery.CallbackQuery(data="help"))
+  if event.is_private:
+    mesaj = str(event.raw_text)
+      await client.send_message(event.chat_id, f"{komutlar}", buttons=(
+                      [
+                      Button.inline("🔒 Anonim", data="anonim"),
+                      Button.inline("🌟 Açıq", data="aciq")
                       ],
                       [
                       Button.inline("🏠 Ana Səhifə", data="start")
                       ]
                     ),
                     link_preview=False)
+                    
+
 
 
 
