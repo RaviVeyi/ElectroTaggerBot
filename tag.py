@@ -83,10 +83,6 @@ async def handler(event):
                     link_preview=False)
 
 
-  if event.is_group:
-    return await client.send_message(event.chat_id, f"{komutlar}")
-
-
 # Başlanğıc Button
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
