@@ -93,11 +93,6 @@ async def komutlar(event):
         Button.inline('Yes!', b'yes'),
         Button.inline('Nope', b'no')    ])
 
-   if selected_button == 'no' :
-        # do something
-   else:
-       # do something
-
 
 
 
