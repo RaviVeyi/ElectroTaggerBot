@@ -85,7 +85,7 @@ async def handler(event):
 
 
 # Yeni Etiraf
-@client.on(events.callbackquery.CallbackQuery(data="komutlar"))
+@client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
     await event.edit(f"**Komutlarım:\n\n/all -text-\n/atag -text-\n/cancel - İşlemi Durdururum...\n\n❕ Yalnızca yöneticileri bu komutları kullanabilir.**", buttons=(
                       [
