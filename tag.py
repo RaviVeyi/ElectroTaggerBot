@@ -85,7 +85,7 @@ async def handler(event):
 
 
 # Yeni Etiraf
-@client.on(events.NewMessage)
+@client.on(events.callbackquery)
 async def komutlar(event: events.NewMessage.Event):
   global komutlar
   if event.is_private:
