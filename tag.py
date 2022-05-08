@@ -85,14 +85,10 @@ async def handler(event):
 
 
 # Yeni Etiraf
-@client.on(events.callbackquery.CallbackQuery(data="help"))
+@client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-    await event.edit(f"{komutlar}", buttons=(
-                      [
-                      Button.inline("🏠 Ana Səhifə", data="start")
-                      ]
-                    ),
-                    link_preview=False)
+  helptext = "**Əmrlərim:\n\n/utag -text- Üyələri Çağıraram.\n/atag -text- Adminləri Çağıraram.\n/kanallar - Rəsmi Kanallarımız\n/cancel - Prosesi Dayandıraram .\n❕ Bu Əmrlərdən Yalnız Administratorlar İstifadə Edə bilər**"
+  await event.reply(helptext)
 
 @client.on(events.NewMessage())
 async def mentionalladmin(event):
@@ -102,6 +98,11 @@ async def mentionalladmin(event):
       pass
     else:
       etiketuye.append(event.chat_id)
+
+
+
+
+
 
 # 5 li etiketleme modulü
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
