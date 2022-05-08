@@ -84,11 +84,11 @@ async def handler(event):
 
 
 # Başlanğıc Button
-@client.on(events.callbackquery.CallbackQuery(data="help"))
+@client.on(events.callbackquery.CallbackQuery(data="/help"))
 async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"{ad} {startmesaj}", buttons=(
+     await event.edit(f"{ad} {komutlar}", buttons=(
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
