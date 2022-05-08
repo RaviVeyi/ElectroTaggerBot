@@ -76,18 +76,7 @@ async def handler(event):
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
     await event.edit(f"{komutlar}", buttons=(
-                      [
-                      Button.inline("🙄Geri Qayıt", data="start")
-                      ]
-                    ),
-                    link_preview=False)
 
-
-# Başlanğıc Button
-@client.on(events.callbackquery.CallbackQuery(data="/help"))
-async def handler(event):
-    async for usr in client.iter_participants(event.chat_id):
-      buttons=(
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
@@ -96,7 +85,12 @@ async def handler(event):
                       [Button.url('📣 Kanal', f'https://t.me/{support}')],
                        [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
+                                          [
+                      Button.inline("🙄Geri Qayıt", data="start")
+                      ]
+                    ),
                     link_preview=False)
+
 
 
 
