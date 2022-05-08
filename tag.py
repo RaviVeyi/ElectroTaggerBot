@@ -85,12 +85,12 @@ async def handler(event):
 
 
 
-@client.on(events.NewMessage(pattern="^/help$"))
-async def start(event):
+@client.on(events.callbackquery.CallbackQuery(data="help"))
+async def handler(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     return await event.reply(f"{ad} {startmesaj}", buttons=(
+     return await event.reply(f"{ad} {komutlar}", buttons=(
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
@@ -102,7 +102,7 @@ async def start(event):
                     link_preview=False)
 
   if event.is_group:
-    return await client.send_message(event.chat_id, f"{qrupstart}")
+    return await client.send_message(event.chat_id, f"{komutlar}")
 
 
 # Başlanğıc Button
