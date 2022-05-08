@@ -86,11 +86,9 @@ async def handler(event):
 
 # Yeni Etiraf
 @client.on(events.callbackquery)
-async def komutlar(event: events.NewMessage.Event):
-  global komutlar
   if event.is_private:
     komutlar = help(event.raw_text)
-    if not komutlar == "help":
+    .CallbackQuery(data="help"))
       await client.send_message(event.chat_id, f"{komutlar}", buttons=(
                       [
                       Button.inline("Əmrlər", data="help"),
