@@ -87,7 +87,7 @@ async def handler(event):
                     ),
                                           [
                       Button.inline("🙄Geri Qayıt", data="start")
-                      ]
+                    ),
                     link_preview=False)
 
 
