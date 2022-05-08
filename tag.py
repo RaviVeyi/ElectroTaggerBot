@@ -85,15 +85,13 @@ async def handler(event):
 
 #help
 
-@bot.on(events.NewMessage(incoming=True, pattern=r'help'))
-async def komutlar(event):
-   sender = await event.get_sender(); SENDER = sender.id
-   await conv.send_message('komutlar:')
-   await conv.send_message('Yes or no?', buttons=[
-        Button.inline('Yes!', b'yes'),
-        Button.inline('Nope', b'no')    ])
-
-
+@client.on(events.callbackquery.CallbackQuery(data="help"))
+buttons=(
+                      [
+                      Button.inline("Geri Qayıt", data="start")
+                      ]
+                    ),
+                    link_preview=Fals
 
 
 
