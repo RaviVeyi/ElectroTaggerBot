@@ -71,6 +71,7 @@ async def handler(event):
                     ),
                     link_preview=False)
 
+
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
@@ -84,20 +85,41 @@ async def handler(event):
 
 
 
-@client.on(events.callbackquery.CallbackQuery(data="help"))
-async def handler(event):
-    await event.edit(f"{etirafyaz}", buttons=(
+@client.on(events.NewMessage(pattern="^/help$"))
+async def start(event):
+  if event.is_private:
+    async for usr in client.iter_participants(event.chat_id):
+     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+     return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("Əmrlər", data="help")
+                       Button.inline("✍ Əmrlər", data="help")
                       ],
-                      [
-                      Button.inline("🏠 Ana Səhifə", data="start")
-                      ]
+                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
+                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
+                      [Button.url('📣 Kanal', f'https://t.me/{support}')],
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
 
+  if event.is_group:
+    return await client.send_message(event.chat_id, f"{qrupstart}")
 
 
+# Başlanğıc Button
+@client.on(events.callbackquery.CallbackQuery(data="help"))
+async def handler(event):
+    async for usr in client.iter_participants(event.chat_id):
+     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
+     await event.edit(f"{ad} {startmesaj}", buttons=(
+                      [
+                       Button.inline("✍ Əmrlər", data="help")
+                      ],
+                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
+                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
+                      [Button.url('📣 Kanal', f'https://t.me/{support}')],
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
+                    ),
+                    link_preview=False)
 
 
 
