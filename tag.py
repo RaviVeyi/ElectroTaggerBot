@@ -87,17 +87,17 @@ async def handler(event):
 # Yeni Etiraf
 @client.on(events.NewMessage)
 async def komutlar(event: events.NewMessage.Event):
-  global mesaj
+  global komutlar
   if event.is_private:
-    mesaj = help(event.raw_text)
-    if not komutlar == "/help":
+    komutlar = help(event.raw_text)
+    if not komutlar == "help":
       await client.send_message(event.chat_id, f"{komutlar}", buttons=(
                       [
-                      Button.inline("🔒 Anonim", data="anonim"),
-                      Button.inline("🌟 Açıq", data="aciq")
+                      Button.inline("Əmrlər", data="help"),
+                      Button.inline("Əmrlər", data="help")
                       ],
                       [
-                      Button.inline("🏠 Ana Səhifə", data="start")
+                      Button.inline("Ana Səhifə", data="start")
                       ]
                     ),
                     link_preview=False)
