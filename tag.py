@@ -86,7 +86,6 @@ async def handler(event):
 
 # Yeni Etiraf
 @client.on(events.callbackquery)
-  if event.is_private:
     komutlar = help(event.raw_text)
     .CallbackQuery(data="help"))
       await client.send_message(event.chat_id, f"{komutlar}", buttons=(
