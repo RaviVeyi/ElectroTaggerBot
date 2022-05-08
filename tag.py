@@ -77,38 +77,10 @@ async def handler(event):
 async def handler(event):
     await event.edit(f"{komutlar}", buttons=(
                       [
-                      Button.inline("🏠 Ana Səhifə", data="start")
+                      Button.inline("Geri Qayıt", data="start")
                       ]
                     ),
                     link_preview=False)
-
-
-
-# Yeni Etiraf
-@client.on(events.callbackquery)
-    .CallbackQuery(data="help"))
-      await client.send_message(event.chat_id, f"{komutlar}", buttons=(
-                      [
-                      Button.inline("Əmrlər", data="help"),
-                      Button.inline("Əmrlər", data="help")
-                      ],
-                      [
-                      Button.inline("Ana Səhifə", data="start")
-                      ]
-                    ),
-                    link_preview=False)
-                 
-
-@client.on(events.NewMessage())
-async def mentionalladmin(event):
-  global etiketuye
-  if event.is_group:
-    if event.chat_id in etiketuye:
-      pass
-    else:
-      etiketuye.append(event.chat_id)
-
-
 
 
 
