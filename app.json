@@ -34,6 +34,10 @@
          "description": "Bura support grubunuz yada kanalınızın kullanıcı adı @ işareti olmadan yazın",
          "value": "MusicAzPlaylist"
       },
+      "Group": {
+         "description": "Bura  grubunuz kullanıcı adı @ işareti olmadan yazın",
+         "value": "MusicAzPlaylist"
+      },
       "startmesaj": {
          "description": "Bota start verilince mesajınız",
          "value": "**Salam** __Qrup və ya kanalın demək olar ki, hər bir üzvünə müraciət edə bilərəm ★__"
