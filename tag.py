@@ -46,6 +46,7 @@ async def start(event):
                       ],
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Support', f'https://t.me/{support}'),
+                      [Button.url('📣 Support', f'https://t.me/{group}'),
                        Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
@@ -64,10 +65,10 @@ async def handler(event):
                       ],
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Support', f'https://t.me/{support}'),
+                      [Button.url('📣 Support', f'https://t.me/{group}'),
                        Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
-
 
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
