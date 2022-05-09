@@ -77,22 +77,7 @@ async def handler(event):
                       ]
                     ),
                     link_preview=False)
-
-
-#help
-
-@client.on(events.callbackquery.CallbackQuery(data="help"))
-buttons=(
-                      [
-                      Button.inline("Geri Qayıt", data="start")
-                      ]
-                    ),
-                    link_preview=Fals
-
-
-
-
-
+                    
 # 5 li etiketleme modulü
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
 async def mentionall(event):
