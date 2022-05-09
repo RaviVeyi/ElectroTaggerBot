@@ -47,10 +47,8 @@ async def start(event):
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
-                    [Button.url('📣 Kanal', f'https://t.me/{support}'),
-                       Button.url
+                    ),
                     link_preview=False)
-
   if event.is_group:
     return await client.send_message(event.chat_id, f"{qrupstart}")
 
@@ -67,8 +65,7 @@ async def handler(event):
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
-                    [Button.url('📣 Kanal', f'https://t.me/{support}'),
-                       Button.url
+                    ),
                     link_preview=False)
 
 
