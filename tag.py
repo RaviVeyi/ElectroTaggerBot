@@ -68,7 +68,6 @@ async def handler(event):
                     ),
                     link_preview=False)
 
-
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
