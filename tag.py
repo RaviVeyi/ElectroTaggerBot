@@ -13,7 +13,7 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
-from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group
+from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support,
 
 logging.basicConfig(
     level=logging.INFO,
