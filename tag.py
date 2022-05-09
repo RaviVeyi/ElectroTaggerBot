@@ -45,8 +45,8 @@ async def start(event):
                        Button.inline("Əmrlər", data="help")
                       ],
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
-                      [Button.url('📣 Support', f'https://t.me/{support}'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
+                      [Button.url('📣 Kanal', f'https://t.me/{support}'),
+                       Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
   if event.is_group:
@@ -63,8 +63,8 @@ async def handler(event):
                        Button.inline("Əmrlər", data="help")
                       ],
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
-                      [Button.url('📣 Support', f'https://t.me/{support}'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
+                      [Button.url('📣 Kanal', f'https://t.me/{support}'),
+                       Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
 
