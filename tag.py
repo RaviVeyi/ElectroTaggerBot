@@ -90,6 +90,19 @@ async def handler(event):
 
 
 
+@client.on(events.callbackquery.CallbackQuery(data="devuser"))
+async def handler(event):
+    await event.edit(f"{devuser}", buttons=(
+                      [
+                      Button.inline("Geri Qayıt", data="start")
+                      ]
+                    ),
+                    link_preview=False)
+
+
+
+
+
 
 # 5 li etiketleme modulü
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
