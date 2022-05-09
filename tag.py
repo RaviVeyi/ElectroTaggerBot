@@ -42,13 +42,16 @@ async def start(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("Əmrlər", data="help")
+                       Button.inline("✍ Əmrlər", data="help")
                       ],
-                      [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
-                      [Button.url('📣 Support', f'https://t.me/{support}'),
-                      [Button.url('📣 Support', f'https://t.me/{group}'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]),
+                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
+                     [Button.url('🥳 Söhbət Qrupu', f'https://t.me/{group}')],
+                      [Button.url('📣 Kanal', f'https://t.me/{support}')],
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
+                    ),
                     link_preview=False)
+                    
+                    
   if event.is_group:
     return await client.send_message(event.chat_id, f"{qrupstart}")
 
@@ -60,14 +63,14 @@ async def handler(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("Əmrlər", data="help")
+                       Button.inline("✍ Əmrlər", data="help")
                       ],
-                      [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
-                      [Button.url('📣 Support', f'https://t.me/{support}'),
-                      [Button.url('📣 Support', f'https://t.me/{group}'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]),
+                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
+                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
+                      [Button.url('📣 Kanal', f'https://t.me/{support}')],
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
+                    ),
                     link_preview=False)
-
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
@@ -316,43 +319,42 @@ async def etag(event):
 
 #cumlelerle tag
 cumle = ( 
-'Deyir:nə sayanın qulu nədə saymayanın ağasıyam...Allahın qulu☺❤sözümün də ağasıyam🤞🏻🖤',
-  
-'Kobud deyləm...sadəcə hörmətə hörmət cavaba da cavabdı😌🤞🏻',
-  
-'Xowbəxt bir qadını sevməyə nə var ki,Həyatından əlini üzmüw bir qadını sev və xowbəxt elə.!Bax onda deyərəm ki,sevməyi bacarır...!!😊💔',
-  
-'~♡BilsəYdim Ki , SəNi BeLə TeZ itirəcəm...💔Dostun olaraq param-parça Qalardım🤞🏻🖤🌚',
-  
-'Mən ağlarkən yanımda yoxsansa, mən gülərkən kölgə etmə.',
-  
-'Çoxlu qüsurları olan insanlar qüsurları ilk növbədə başqalarında görürlər.',
-  
-'Sözlər yarpaqlara bənzəyir, çoxlu yarpağı olan ağac az bəhrə verir. - Aleksandr Pop',
-  
-'Sevgi körpü qurmaqdır. İnsanlar körpü quracaqları yerdə, divar hördükləri üçün yalnızdırlar. - İsaak Nyuton',
-  
-'Qadının ən böyük cavahiratı onun namusudur. - Anatol Frans',
-  
-'Ağıl da, qəlb də eşq atəşinin qığılcımıdır. - Məhəmməd İqbal'
-  
-'Kasıb da olsa, bağışlamağı bacaran zəngin insandır. - Aristotel'
-
-'Qorxunun qulu olmaq köləliyin ən dəhşətli növüdür.',
-  
-'Sən belə bilməzsən, gülüşün məndə neçə bahar edər.',
-  
-'Sənə necə davranmalarını istəyirsənsə, sən də başqalarına elə davran. Lakin, ilk yaxşı davranışı sən et.',
-  
-'Kimisi gözəlim deyər sevdiyinə kimisi də özəlim. Amma sevgi nə gözəllik istər, nə də özəllik. Sevgi sadəcə ürək istər!',
-  
-'Əvvəlki kimi olsa eşqlər.. Qız, sevdiyi kişinin əlini tutmağa utansa. Kişi sevdiyinin gözlərinə baxmağa qıya bilməsə.',
-  
-'Anlamaq üçün dinləmirik, cavab vermək üçün dinləyirik.Ən böyük problemimiz də budur.'
-
-'Həyat bağıra bağıra susmağı öyrədir insana.',
-
-'Ya sevməyi bilmədik, ya da həddindən çox sevdik...',
+'Bazı insanlar yağmuru hissеdеr, bazıları isе sadеcе ıslanır',
+'Unutma; Hеr gеlеn sеvmеz.. Vе hiçbir sеvеn gitmеz',
+'Hiç bir canın acısı, sеnin acından az dеğildir',
+'Herşeyi denerim; ama yapabildiklerimi yaparım.',
+'Aşk bir kadının yaşamının tüm öyküsü, erkeğin ise yalnızca bir serüvenidir.',
+'Mutluluk her şeyden önce vücut sağlığındadır.',
+'Ne kadar yaşadığımız değil, nasıl yaşadığımız önemlidir',
+'Dünya bir gök kuşağı, zihin bir prizma ve varlık ise beyaz bir ışındır.'
+'Nereye gittiğini bilmiyorsan, hangi yoldan gittiğinin hiçbir önemi yoktur.'
+'Hayatta en değerli olan zamandır. Kime hediye ettiğine dikkat et.'
+'Bir evin bütün camlarını kırıp sonra da kapısını çalamazsın.'
+'Mutluluk yaşadığın hayat tarzında değil, hayata bakış tarzındadır.'
+'Unutma; Hеr gеlеn sеvmеz.. Vе hiçbir sеvеn gitmеz.'
+'Yarım nefeslik bu hayatta. Sevgiden başka hiçbir şey planlama...'
+'Herkese içindeki iyilik kadar iyi bir hayat dilerim.'
+'Güzeli güzel yapan edeptir, edep ise güzeli sevmeye sebeptir!'
+'Gül verenin elinde gül kokusu kalır"
+'Aradığın seni arayandır.'
+'Bir kuş bile nasibi kadar kanat çırpar gökyüzünde.'
+'Gönül almayı bilmeyene ömür emanet edilmez'
+'Dürüst olmaktan korkma, kaybedeceğin en fazla yanlış insanlar olur.'
+'İnsan odun değildir ki, kırıldığı zaman ses çıkarsın.'
+'Öğrenmek, yaşamın tek kanıtıdır.'
+'Dünya nüfusu arttıkça, insan sayısı azalıyor.'
+'Layık olduğunu düşünmediğiniz insanlara asla doğruları söylemeyin.' 'Çok şükür ki gökyüzü henüz hiçbir cüzdana sığmıyor.'
+'Kendin ol. Zaten herkes alındı.'
+'Canımı yaka yaka, boğazımdaki düğümleri yutkundum.'
+'O kadar güzel gülüyordu ki, sevmesem ziyan olacaktı.'
+'Sevdiği ben değilim. Size bunun acısını anlatamam.'
+'Sevdiği ben değilim. Size bunun acısını anlatamam.'
+'Alışıyorsunuz zamanla her şeye ama asla bitmiyor.'
+'Eğer doğruyu söylersen hiçbir şeyi hatırlamak zorunda değilsin.'
+'Gerçeği ilk sen söyle… Yoksa senin için birisi elbet doğruyu söyleyecektir.'
+'Erkekler daha güçlü olabilir ama tahammül eden kadınlardır.'
+'Hiçbir acının tarifi yoktur'
+'Peşinden gidecek cesaretin varsa, bütün hayaller gerçek olabilir.'
 )
 
 
@@ -409,127 +411,6 @@ async def ctag(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
- 
- #########################
- 
-# şəhid adları ilə tağ Allah bütün Şəhidlərimizə Rəhmət Eləsin
-
-sehid = "Abdullayev Qəzənfər Nəcəf Abdullayev Nurlan İnqilab Abdullayev Nicat Mirnəbi Abdullayev Məhəmməd Ramazan Allahverənov Telman Fazil Alıyev Qələndər Nofəl Abdullayev İbrahim Habil Abdullayev Elşən Sabir Abdullayev Həsən Qərib".split(" ")
- 
-@client.on(events.NewMessage(pattern="^/sehid ?(.*)"))
-async def sehid(event):
-  global gece_tag
-  if event.is_private:
-    return await event.respond(f"😡 Bu Əmri Qrupda İşlət")
-  
-  admins = []
-  async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
-    admins.append(admin.id)
-  if not event.sender_id in admins:
-    return await event.respond(f"Sən Admin Deyilsən 🤣")
-  
-  if event.pattern_match.group(1):
-    mode = "text_on_cmd"
-    msg = event.pattern_match.group(1)
-  elif event.reply_to_msg_id:
-    mode = "text_on_reply"
-    msg = event.reply_to_msg_id
-    if msg == None:
-        return await event.respond("__Eski mesajları göremiyorum! (bu mesaj beni gruba eklemeden önce yazılmış)__")
-  elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Etiketleme mesajı yazmadın!__")
-  else:
-    return await event.respond("__Etiketleme için bir mesajı yanıtlayın veya bir mesaj yazın!__")
-    
-  if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "❄️ Söz ile etiketleme başladı\n⏱️ İnterval - 2 saniye",
-                    buttons=(
-                      [
-                       Button.url('📣 Support', f'https://t.me/{support}')
-                      ]
-                    )
-                  ) 
-    gece_tag.append(event.chat_id)
-    usrnum = 0
-    usrtxt = ""
-    async for usr in client.iter_participants(event.chat_id):
-      usrnum += 1
-      usrtxt += f"[{random.choice(sehid)}](tg://user?id={usr.id}) "
-      if event.chat_id not in gece_tag:
-        await event.respond("⛔ Söz ile etiketleme işlemi durduruldu",
-                    buttons=(
-                      [
-                       Button.url('📣 Support', f'https://t.me/{support}')
-                      ]
-                    )
-                  )
-        return
-      if usrnum == 1:
-        await client.send_message(event.chat_id, f"{usrtxt} {msg}")
-        await asyncio.sleep(2)
-        usrnum = 0
-        usrtxt = ""
- 
- #########################
- 
-#bayraq larla tağ 
-bayrag = "🇦🇨 🇦🇩 🇦🇪 🇦🇫 🇦🇬 🇦🇮 🇦🇱 🇦🇴 🇦🇶 🇦🇷 🇦🇸 🇦🇹🇦🇺 🇦🇼 🇦🇽 🇦🇿 🇧🇦 🇧🇧 🇧🇩 🇧🇪 🇧🇫 🇧🇬 🇧🇭 🇧🇮🇧🇯 🇧🇱 🇧🇲 🇧🇳 🇧🇴 🇧🇶 🇧🇷 🇧🇸 🇧🇹 🇧🇻 🇧🇼 🇧🇾🇧🇿 🇨🇦 🇨🇨 🇨🇩 🇨🇫 🇨🇬 🇨🇭 🇨🇮 🇨🇰 🇨🇱 🇨🇲 🇨🇳🇨🇵 🇨🇷 🇨🇺 🇨🇻 🇨🇼 🇨🇽 🇨🇾 🇨🇿 🇩🇪 🇩🇬 🇩🇯 🇩🇰🇩🇲 🇩🇴 🇩🇿 🇪🇦 🇪🇨 🇪🇪 🇪🇬 🇪🇭 🇪🇷 🇪🇸 🇪🇹 🇪🇺🇫🇮 🇫🇯 🇫🇰 🇫🇲 🇫🇴 🇫🇷 🇬🇦 🇬🇧 🇬🇩 🇬🇪 🇬🇫 🇬🇬🇬🇭 🇬🇮 🇬🇱 🇬🇲 🇬🇳 🇬🇵 🇬🇶 🇬🇷 🇬🇸 🇬🇹 🇬🇺 🇬🇼🇬🇾 🇭🇰 🇭🇲 🇭🇳 🇭🇷 🇭🇹 🇭🇺 🇮🇨 🇮🇩 🇮🇪 🇮🇱 🇮🇲🇮🇳 🇮🇴 🇮🇶 🇮🇷 🇮🇸 🇮🇹 🇯🇪 🇯🇲 🇯🇴 🇯🇵 🇰🇪 🇰🇬🇰🇭 🇰🇮 🇰🇲 🇰🇳 🇰🇵 🇰🇷 🇰🇼 🇰🇾 🇰🇿 🇱🇦 🇱🇧 🇱🇨🇱🇮 🇱🇰 🇱🇷 🇱🇸 🇱🇹 🇱🇺 🇱🇻 🇱🇾 🇲🇦 🇲🇨 🇲🇩 🇲🇪🇲🇫 🇲🇬 🇲🇭 🇲🇰 🇲🇱 🇲🇲 🇲🇳 🇲🇴 🇲🇵 🇲🇶 🇲🇷 🇲🇸🇲🇹 🇲🇺 🇲🇻 🇲🇼 🇲🇽 🇲🇾 🇲🇿 🇳🇦 🇳🇨 🇳🇪 🇳🇫 🇳🇬🇳🇮 🇳🇱 🇳🇴 🇳🇵 🇳🇷 🇳🇺 🇳🇿 🇴🇲 🇵🇦 🇵🇪 🇵🇫 🇵🇬🇵🇭 🇵🇰 🇵🇱 🇵🇲 🇵🇳 🇵🇷 🇵🇸 🇵🇹 🇵🇼 🇵🇾 🇶🇦 🇷🇪🇷🇴 🇷🇸 🇷🇺 🇷🇼 🇸🇦 🇸🇧 🇸🇨 🇸🇩 🇸🇪 🇸🇬 🇸🇭 🇸🇮🇸🇯 🇸🇰 🇸🇱 🇸🇲 🇸🇳 🇸🇴 🇸🇷 🇸🇸 🇸🇹 🇸🇻 🇸🇽 🇸🇾🇸🇿 🇹🇦 🇹🇨 🇹🇩 🇹🇫 🇹🇬 🇹🇭 🇹🇯 🇹🇰 🇹🇱 🇹🇲 🇹🇳🇹🇴 🇹🇷 🇹🇹 🇹🇻 🇹🇼 🇹🇿 🇺🇦 🇺🇬 🇺🇲 🇺🇳 🇺🇸 🇺🇾🇺🇿 🇻🇦 🇻🇨 🇻🇪 🇻🇬 🇻🇮 🇻🇳 🇻🇺 🇼🇫 🇼🇸 🇽🇰 🇾🇪🇾🇹 🇿🇦 🇿🇲 🇿🇼".split(" ")
- 
- 
-@client.on(events.NewMessage(pattern="^/btag ?(.*)"))
-async def btag(event):
-  global gece_tag
-  if event.is_private:
-    return await event.respond(f"😡 Bu Əmri Qrupda İşlət")
-  
-  admins = []
-  async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
-    admins.append(admin.id)
-  if not event.sender_id in admins:
-    return await event.respond(f"Sən Admin Deyilsən 🤣")
-  
-  if event.pattern_match.group(1):
-    mode = "text_on_cmd"
-    msg = event.pattern_match.group(1)
-  elif event.reply_to_msg_id:
-    mode = "text_on_reply"
-    msg = event.reply_to_msg_id
-    if msg == None:
-        return await event.respond("__Köhnə mesajları görə bilmirəm! (bu mesaj məni qrupa əlavə etməmişdən qabaq yazılıb)__")
-  elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Tağ mesajı yazmadın!__")
-  else:
-    return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
-    
-  if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "❄️ Bayraq larla  Tağ başladı\n⏱️ İnterval - 2 saniyə",
-                    buttons=(
-                      [
-                       Button.url('📣 Support', f'https://t.me/{support}')
-                      ]
-                    )
-                  ) 
-    gece_tag.append(event.chat_id)
-    usrnum = 0
-    usrtxt = ""
-    async for usr in client.iter_participants(event.chat_id):
-      usrnum += 1
-      usrtxt += f"[{random.choice(bayrag)}](tg://user?id={usr.id}) "
-      if event.chat_id not in gece_tag:
-        await event.respond("⛔ Bayraq  larla Tağ Prosesi Dayandırıldı",
-                    buttons=(
-                      [
-                       Button.url('📣 Support', f'https://t.me/{support}')
-                      ]
-                    )
-                  )
-        return
-      if usrnum == 5:
-        await client.send_message(event.chat_id, f"{usrtxt} {msg}")
-        await asyncio.sleep(2)
-        usrnum = 0
-        usrtxt = ""
- 
     
 #########################
 
