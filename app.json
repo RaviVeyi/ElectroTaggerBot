@@ -33,10 +33,6 @@
       "support": {
          "description": "Bura support grubunuz yada kanalınızın kullanıcı adı @ işareti olmadan yazın",
          "value": "MusicAzPlaylist"
-      },      
-      "group": {
-         "description": "Bura grubunuz yada kanalınızın kullanıcı adı @ işareti olmadan yazın",
-         "value": "MusicAz"
       },
       "startmesaj": {
          "description": "Bota start verilince mesajınız",
