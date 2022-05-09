@@ -111,7 +111,7 @@ async def mentionall(event):
     await client.send_message(event.chat_id, "❄️ Tağ Başladı\n⏱️ İnterval - 2 saniyə",
                                         buttons=(
                       [
-                      Button.inline(f"❌dayandır❌", data="cancel")
+                      Button.inline(f"dayandır", data="cancel")
                       ]
                     )
                   ) 
@@ -130,7 +130,7 @@ async def mentionall(event):
                     )
                   )
         return
-      if usrnum == 1:
+      if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
         await asyncio.sleep(2)
         usrnum = 0
