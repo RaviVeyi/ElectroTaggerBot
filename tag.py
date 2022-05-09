@@ -47,7 +47,6 @@ async def start(event):
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
-                    ),
                     [Button.url('📣 Kanal', f'https://t.me/{support}'),
                        Button.url
                     link_preview=False)
@@ -68,7 +67,6 @@ async def handler(event):
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
-                    ),
                     [Button.url('📣 Kanal', f'https://t.me/{support}'),
                        Button.url
                     link_preview=False)
