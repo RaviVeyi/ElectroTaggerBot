@@ -47,8 +47,7 @@ async def start(event):
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Support', f'https://t.me/{support}'),
                       [Button.url('📣 Support', f'https://t.me/{group}'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
-                    ),
+                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]),
                     link_preview=False)
   if event.is_group:
     return await client.send_message(event.chat_id, f"{qrupstart}")
@@ -66,8 +65,7 @@ async def handler(event):
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Support', f'https://t.me/{support}'),
                       [Button.url('📣 Support', f'https://t.me/{group}'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
-                    ),
+                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]),
                     link_preview=False)
 
 # gece kusu
