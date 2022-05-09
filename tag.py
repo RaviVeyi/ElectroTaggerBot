@@ -44,6 +44,9 @@ async def start(event):
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
+                      [
+                       Button.inline("✍ Əmrlər", data="help")
+                      ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                      [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}')],
@@ -61,6 +64,9 @@ async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"{ad} {startmesaj}", buttons=(
+                      [
+                       Button.inline("✍ Əmrlər", data="help")
+                      ],
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
