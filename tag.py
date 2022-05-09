@@ -42,13 +42,12 @@ async def start(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("Əmrlər", data="help")
+                       Button.inline("✍ Əmrlər", data="help")
                       ],
-                      [Button.url('Məni Qrupa əlavə Et', f'https://t.me/{USERNAME}')],
-                      [Button.url('📣 Support', f'https://t.me/{support}'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
-                      Button.inline("🏠 Ana Səhifə", data="start")
-                      ]
+                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
+                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
+                      [Button.url('📣 Kanal', f'https://t.me/{support}')],
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
 
@@ -63,13 +62,12 @@ async def handler(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("Əmrlər", data="help")
+                       Button.inline("✍ Əmrlər", data="help")
                       ],
-                      [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
-                      [Button.url('📣 Support', f'https://t.me/{support}'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
-                      Button.inline("🏠 Ana Səhifə", data="start")
-                      ]
+                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
+                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
+                      [Button.url('📣 Kanal', f'https://t.me/{support}')],
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
 
