@@ -34,7 +34,7 @@
          "description": "Bura support grubunuz yada kanalınızın kullanıcı adı @ işareti olmadan yazın",
          "value": "MusicAzPlaylist"
       },
-      "Group": {
+      "group": {
          "description": "Bura  grubunuz kullanıcı adı @ işareti olmadan yazın",
          "value": "MusicAzPlaylist"
       },
