@@ -13,7 +13,7 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
-from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group, hp
+from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group
 
 logging.basicConfig(
     level=logging.INFO,
@@ -42,7 +42,6 @@ async def start(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("✍", data="hp")
                        Button.inline("✍ Əmrlər", data="help")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
@@ -63,7 +62,6 @@ async def handler(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("✍", data="hp")
                        Button.inline("✍ Əmrlər", data="help")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
