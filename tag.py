@@ -109,9 +109,9 @@ async def mentionall(event):
     
   if mode == "text_on_cmd":
     await client.send_message(event.chat_id, "❄️ Tağ Başladı\n⏱️ İnterval - 2 saniyə",
-                    buttons=(
+                                        buttons=(
                       [
-                      Button.url('📣 Support', f'https://t.me/{support}')
+                      Button.inline(f"❌dayandır❌", data="cancel")
                       ]
                     )
                   ) 
@@ -120,24 +120,23 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"➢ [{usr.first_name}](tg://user?id={usr.id})\n "
+      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
-        await event.respond("⛔ Tağ Prosesi Dayandırıldı",
+        await event.respond("**⛔ Tək Tək Tag Prosesi Dayandırıldı**",
                     buttons=(
                       [
-                       Button.url('📣 Support', f'https://t.me/{support}')
+                      Button.inline(f"yenidən", data="yenidən")
                       ]
                     )
                   )
         return
-      if usrnum == 5:
+      if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
 
-    
-
+                  
 #########################
 
 # admin etiketleme modülü
