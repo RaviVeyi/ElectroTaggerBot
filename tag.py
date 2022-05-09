@@ -44,7 +44,6 @@ async def start(event):
                       [
                        Button.inline("Admin Əmrləri", data="Admin")
                       ],
-                      [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
