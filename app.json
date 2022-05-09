@@ -46,9 +46,9 @@
          "description": "Qrup başladıqda mesajınız",
           "value": " ✅ **Hazırda aktiv işləyirəm !** 🕊️ **Əmrlərə baxmaq üçün /help Yazın**"
       },
-      "admin": {
+      "adminhelp": {
          "description":"Bot Sahibi Əmrləri",
-          "value": "Yenilənir😉"
+          "value": "Tezliklə😉"
       },
       "komutlar": {
          "description":"Kömək menyusu",
