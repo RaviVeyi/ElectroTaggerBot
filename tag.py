@@ -43,7 +43,7 @@ async def start(event):
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
                        Button.inline("Əmrlər", data="help")
-                      ],
+                      ]
                        Button.inline("Haqqımızda", data="bilgi")
                       ],
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
@@ -64,7 +64,7 @@ async def handler(event):
      await event.edit(f"{ad} {startmesaj}", buttons=(
                       [
                        Button.inline("Əmrlər", data="help")
-                      ],
+                      ]
                        Button.inline("Haqqımızda", data="bilgi")
                       ],
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
