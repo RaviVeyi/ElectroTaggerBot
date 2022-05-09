@@ -46,7 +46,7 @@
          "description": "Qrup başladıqda mesajınız",
           "value": " ✅ **Hazırda aktiv işləyirəm !** 🕊️ **Əmrlərə baxmaq üçün /help Yazın**"
       },
-      "owner": {
+      "sudo": {
          "description":"Bot Sahibi Əmrləri",
           "value": "Tezliklə😉"
       },
