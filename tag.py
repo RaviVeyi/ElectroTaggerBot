@@ -66,6 +66,8 @@ async def handler(event):
                       [Button.url('📣 Kanal', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
+                    [Button.url('📣 Kanal', f'https://t.me/{support}'),
+                       Button.url
                     link_preview=False)
 
 
