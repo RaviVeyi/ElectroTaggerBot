@@ -47,6 +47,8 @@ async def start(event):
                       [Button.url('Məni Qrupa əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Support', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
+                      Button.inline("🏠 Ana Səhifə", data="start")
+                      ]
                     ),
                     link_preview=False)
 
