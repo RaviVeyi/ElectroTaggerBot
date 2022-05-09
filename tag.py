@@ -45,7 +45,7 @@ async def start(event):
                        Button.inline("✍ Əmrlər", data="help")
                       ],
                       [
-                       Button.inline("✍ Əmrlər", data="help")
+                       Button.inline("✍ Əmrlər", data="admin")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                      [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
@@ -68,7 +68,7 @@ async def handler(event):
                        Button.inline("✍ Əmrlər", data="help")
                       ],
                       [
-                       Button.inline("✍ Əmrlər", data="help")
+                       Button.inline("✍ Əmrlər", data="admin")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                      [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
@@ -87,18 +87,6 @@ async def handler(event):
                       ]
                     ),
                     link_preview=False)
-
-
-#help
-
-@client.on(events.callbackquery.CallbackQuery(data="help"))
-buttons=(
-                      [
-                      Button.inline("Geri Qayıt", data="start")
-                      ]
-                    ),
-                    link_preview=Fals
-
 
 
 
