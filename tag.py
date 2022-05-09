@@ -13,7 +13,7 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
-from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group, devuser
+from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group
 
 logging.basicConfig(
     level=logging.INFO,
@@ -44,9 +44,6 @@ async def start(event):
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
-                      [
-                       Button.inline("✍Sahib  Əmrləri", data="komut")
-                      ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                      [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}')],
@@ -67,9 +64,6 @@ async def handler(event):
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
-                      [
-                       Button.inline("✍Sahib  Əmrləri", data="komut")
-                      ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                      [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}')],
@@ -89,16 +83,15 @@ async def handler(event):
                     link_preview=False)
 
 
+#help
 
-@client.on(events.callbackquery.CallbackQuery(data="devuser"))
-async def handler(event):
-    await event.edit(f"{devuser}", buttons=(
+@client.on(events.callbackquery.CallbackQuery(data="help"))
+buttons=(
                       [
                       Button.inline("Geri Qayıt", data="start")
                       ]
                     ),
-                    link_preview=False)
-
+                    link_preview=Fals
 
 
 
