@@ -42,21 +42,13 @@ async def start(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      return await event.reply(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("💌 Etiraf Yaz", data="etiraf")
+                       Button.inline("Əmrlər", data="help")
                       ],
-                      [Button.url('📜 Etiraf Kanalı', f'https://t.me/{kanal}')],
-                      [Button.url('📣 Support', f'https://t.me/{support}'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
-                    ),
-                      [
-                       Button.inline("💌 Etiraf Yaz", data="etiraf")
-                      ],
-                      [Button.url('📜 Etiraf Kanalı', f'https://t.me/{kanal}')],
+                      [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Support', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
-
   if event.is_group:
     return await client.send_message(event.chat_id, f"{qrupstart}")
 
@@ -68,20 +60,14 @@ async def handler(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"{ad} {startmesaj}", buttons=(
                       [
-                       Button.inline("💌 Etiraf Yaz", data="etiraf")
+                       Button.inline("Əmrlər", data="help")
                       ],
-                      [Button.url('📜 Etiraf Kanalı', f'https://t.me/{kanal}')],
-                      [Button.url('📣 Support', f'https://t.me/{support}'),
-                       Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
-                    ),
-                      [
-                       Button.inline("💌 Etiraf Yaz", data="etiraf")
-                      ],
-                      [Button.url('📜 Etiraf Kanalı', f'https://t.me/{kanal}')],
+                      [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Support', f'https://t.me/{support}'),
                        Button.url('👨🏻‍💻 Sahibim', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
+
 
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
@@ -92,6 +78,20 @@ async def handler(event):
                       ]
                     ),
                     link_preview=False)
+
+
+#help
+
+@client.on(events.callbackquery.CallbackQuery(data="help"))
+buttons=(
+                      [
+                      Button.inline("Geri Qayıt", data="start")
+                      ]
+                    ),
+                    link_preview=Fals
+
+
+
 
 
 # 5 li etiketleme modulü
