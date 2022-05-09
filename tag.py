@@ -13,7 +13,7 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
-from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support
+from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group
 
 logging.basicConfig(
     level=logging.INFO,
@@ -46,7 +46,7 @@ async def start(event):
                       ],
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}'),
-                      [Button.url('📜 Etiraf Kanalı', f'https://t.me/{kanal}')],
+                      [Button.url('Qrup', f'https://t.me/{group}')],
                        Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
@@ -66,7 +66,7 @@ async def handler(event):
                       ],
                       [Button.url('Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}')],
                       [Button.url('📣 Kanal', f'https://t.me/{support}'),
-                      [Button.url('📜 Etiraf Kanalı', f'https://t.me/{kanal}')],
+                      [Button.url('Qrup', f'https://t.me/{group}')],
                        Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
                     ),
                     link_preview=False)
