@@ -125,7 +125,7 @@ async def mentionall(event):
         await event.respond("**⛔ Tək Tək Tag Prosesi Dayandırıldı**",
                     buttons=(
                       [
-                      Button.inline(f"{yenidən}", data="yenidən")
+                      Button.inline(f"{yenidən}", data="tag")
                       ]
                     )
                   )
