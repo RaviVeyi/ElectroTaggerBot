@@ -111,7 +111,7 @@ async def mentionall(event):
     await client.send_message(event.chat_id, "❄️ Tağ Başladı\n⏱️ İnterval - 2 saniyə",
                                         buttons=(
                       [
-                      Button.inline(f"{dayandır}", data="cancel")
+                      Button.inline(f"dayandır", data="cancel")
                       ]
                     )
                   ) 
@@ -126,11 +126,11 @@ async def mentionall(event):
         await event.respond("**⛔ Tək Tək Tag Prosesi Dayandırıldı**",
                     buttons=(
                       [
-                      Button.inline(f"{yenidən}", data="yeniden")
+                      Button.inline("dayandır", data="cancel")
                       ]
                     )
                   )
- @client.on(events.callbackquery.CallbackQuery(data="cancel"))    
+                  @client.on(events.callbackquery.CallbackQuery(data="cancel"))
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
