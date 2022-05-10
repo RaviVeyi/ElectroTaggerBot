@@ -119,13 +119,13 @@ async def mentionall(event):
                       ]
                     )
                   ) 
-    aykhan_tag.append(event.chat_id)
+    gece_tag.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
-      if event.chat_id not in aykhan_tag:
+      if event.chat_id not in gece_tag:
         await event.respond("⛔ Tək Tək Tağ Prosesi Dayandırıldı",
                     buttons=(
                       [
