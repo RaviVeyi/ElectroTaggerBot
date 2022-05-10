@@ -116,6 +116,9 @@ async def mentionall(event):
                     )
                   ) 
                   @client.on(events.callbackquery.CallbackQuery(data="cancel"))
+                  @client.on(events.callbackquery.CallbackQuery(data="cancel")) 
+                  
+                  
     gece_tag.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
@@ -124,13 +127,7 @@ async def mentionall(event):
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in gece_tag:
         await event.respond("**⛔ Tək Tək Tag Prosesi Dayandırıldı**",
-                    buttons=(
-                      [
-                      Button.inline("dayandır", data="cancel")
-                      ]
-                    )
-                  )
-                  @client.on(events.callbackquery.CallbackQuery(data="cancel"))
+        Button.inline(f"dayandır", data="cancel")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
