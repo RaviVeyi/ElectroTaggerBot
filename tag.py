@@ -34,6 +34,11 @@ async def cancel(event):
   gece_tag.remove(event.chat_id)
   
   
+@client.on(events.callbackquery.CallbackQuery(data="cancel"))
+async def cancel(event):
+  global gece_tag
+  gece_tag.remove(event.chat_id)
+  
 # Başlanğıc Mesajı
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
@@ -111,25 +116,26 @@ async def mentionall(event):
     await client.send_message(event.chat_id, "❄️ Tağ Başladı\n⏱️ İnterval - 2 saniyə",
                                         buttons=(
                       [
-                      Button.inline(f"dayandır", data="cancel")
+                      Button.inline(f"dayandir", data="cancel")
                       ]
                     )
                   ) 
-                  @client.on(events.callbackquery.CallbackQuery(data="cancel"))
-                  @client.on(events.callbackquery.CallbackQuery(data="cancel")) 
-                  
-                  
-    gece_tag.append(event.chat_id)
+    aykhan_tag.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
-      if event.chat_id not in gece_tag:
-        await event.respond("**⛔ Tək Tək Tag Prosesi Dayandırıldı**",
-        Button.inline(f"dayandır", data="cancel")
+      if event.chat_id not in aykhan_tag:
+        await event.respond("⛔ Tək Tək Tağ Prosesi Dayandırıldı",
+                    buttons=(
+                      [
+                      Button.inline(f"yeniden", data="yeniden")
+                      ]
+                    )
+                  )
         return
-      if usrnum == 5:
+      if usrnum == 1:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
         await asyncio.sleep(2)
         usrnum = 0
