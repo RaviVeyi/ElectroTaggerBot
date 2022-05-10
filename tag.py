@@ -25,13 +25,6 @@ LOGGER = logging.getLogger(__name__)
 anlik_calisan = []
 
 gece_tag = []
-
-
-#tektag
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
-async def cancel(event):
-  global gece_tag
-  gece_tag.remove(event.chat_id)
   
   
 @client.on(events.callbackquery.CallbackQuery(data="cancel"))
