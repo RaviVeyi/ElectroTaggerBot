@@ -115,6 +115,7 @@ async def mentionall(event):
                       ]
                     )
                   ) 
+                  @client.on(events.callbackquery.CallbackQuery(data="cancel"))
     gece_tag.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
@@ -125,10 +126,11 @@ async def mentionall(event):
         await event.respond("**⛔ Tək Tək Tag Prosesi Dayandırıldı**",
                     buttons=(
                       [
-                      Button.inline(f"{yenidən}", data="tag")
+                      Button.inline(f"{yenidən}", data="yeniden")
                       ]
                     )
                   )
+ @client.on(events.callbackquery.CallbackQuery(data="cancel"))    
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
