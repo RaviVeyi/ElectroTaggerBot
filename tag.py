@@ -62,6 +62,38 @@ async def start(event):
   if event.is_group:
     return await client.send_message(event.chat_id, f"{qrupstart}")
 
+#ElectroTaggerBot Kömək Menyusu
+
+@client.on(events.callbackquery.CallbackQuery(data="help"))
+async def help(event):
+  await client.send_message(event.chat_id, f"{etirafmsg}", buttons=(
+                      [
+                      Button.inline("🔒Əmrlər", data="help"),
+                      Button.inline("🌟 Açıq", data="aciq")
+                      ],
+                      [
+                      Button.inline("🏠 Ana Səhifə", data="start")
+                      ]
+                    ),
+                    link_preview=False)
+                    
+                    
+    gece_tag.append(event.chat_id)
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id):
+  await event.reply(helptext)
+
+@client.on(events.NewMessage())
+async def mentionalladmin(event):
+  global etiketuye
+  if event.is_group:
+    if event.chat_id in etiketuye:
+      pass
+    else:
+      etiketuye.append(event.chat_id)
+
+
 
 # Başlanğıc Button
 @client.on(events.callbackquery.CallbackQuery(data="start"))
