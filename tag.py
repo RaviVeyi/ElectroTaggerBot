@@ -30,14 +30,14 @@ Husu_tag = []
   
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event): 
-  global gece_tag 
-  gece_tag.remove(event.chat_id)
+  global Husu_tag 
+  Husu_tag.remove(event.chat_id)
 
   
 @client.on(events.callbackquery.CallbackQuery(data="cancel"))
 async def cancel(event):
-  global gece_tag
-  gece_tag.remove(event.chat_id)
+  global Husu_tag
+  Husu_tag.remove(event.chat_id)
   
   
   
@@ -91,7 +91,7 @@ async def handler(event):
 # 5 li tağ modulu
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
 async def tag(event):
-  global aykhan_tag
+  global Husu_tag
   if event.is_private:
     return await event.respond(f"{noqrup}")
   
@@ -122,13 +122,13 @@ async def tag(event):
                       ]
                     )
                   ) 
-    aykhan_tag.append(event.chat_id)
+    Husu_tag.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
-      if event.chat_id not in aykhan_tag:
+      if event.chat_id not in Husu_tag:
         await event.respond("⛔ Tək Tək Tağ Prosesi Dayandırıldı",
                     buttons=(
                       [
