@@ -24,7 +24,7 @@ LOGGER = logging.getLogger(__name__)
 
 anlik_calisan = []
 
-gece_tag = []
+Husu_tag = []
   
   
   
@@ -88,18 +88,18 @@ async def handler(event):
                     ),
                     link_preview=False)
                     
-# 5 li etiketleme modulü
+# 5 li tağ modulu
 @client.on(events.NewMessage(pattern="^/tag ?(.*)"))
-async def mentionall(event):
-  global gece_tag
+async def tag(event):
+  global aykhan_tag
   if event.is_private:
-    return await event.respond(f"😡 Bu Əmri Qrupda İşlət")
+    return await event.respond(f"{noqrup}")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond(f"Sən Admin Deyilsən 🤣")
+    return await event.respond(f"{noadmin}")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -115,24 +115,24 @@ async def mentionall(event):
     return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
     
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "❄️ Tağ Başladı\n⏱️ İnterval - 2 saniyə",
-                                        buttons=(
+    await client.send_message(event.chat_id, "❄️ 5-li Tağ Başladı\n⏱️ İnterval - 2 saniyə",
+                    buttons=(
                       [
-                      Button.inline(f"dayandir", data="cancel")
+                      Button.inline(f"🥳dayandir", data="cancel")
                       ]
                     )
                   ) 
-    gece_tag.append(event.chat_id)
+    aykhan_tag.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
-      if event.chat_id not in gece_tag:
+      if event.chat_id not in aykhan_tag:
         await event.respond("⛔ Tək Tək Tağ Prosesi Dayandırıldı",
                     buttons=(
                       [
-                      Button.inline(f"yeniden", data="yeniden")
+                      Button.inline(f"🙄Təmirdə", data="yeniden")
                       ]
                     )
                   )
@@ -146,20 +146,20 @@ async def mentionall(event):
 #########################
 
 # renk ile etiketleme modülü
-renk = "🔴 🟠 🟡 🟢 🔵 🟣 🟤 ⚫ ⚪ " .split(" ") 
+reng = "🔴 🟠 🟡 🟢 🔵 🟣 🟤 ⚫ ⚪ " .split(" ") 
         
 
 @client.on(events.NewMessage(pattern="^/rtag ?(.*)"))
 async def rtag(event):
-  global gece_tag
+  global Husu_tag
   if event.is_private:
-    return await event.respond(f"😡 Bu Əmri Qrupda İşlət")
+    return await event.respond(f"{noqrup}")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond(f"Sən Admin Deyilsən 🤣")
+    return await event.respond(f"{noadmin}")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -168,31 +168,31 @@ async def rtag(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("__Eski mesajları göremiyorum! (bu mesaj beni gruba eklemeden önce yazılmış)__")
+        return await event.respond("__Köhnə mesajları görə bilmirəm! (bu mesaj məni qrupa əlavə etməmişdən qabaq yazılıb)__")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("__Etiketleme mesajı yazmadın!__")
+    return await event.respond("__Tağ mesajı yazmadın!__")
   else:
-    return await event.respond("__Etiketleme için bir mesajı yanıtlayın veya bir mesaj yazın!__")
+    return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
     
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "❄️ Renk ile etiketleme başladı\n⏱️ İnterval - 2 saniye",
+    await client.send_message(event.chat_id, "❄️ Rənglərlə Tağ Başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
                       Button.inline(f"dayandir", data="cancel")
                       ]
                     )
                   ) 
-    gece_tag.append(event.chat_id)
+    Husu_tag.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
-      if event.chat_id not in gece_tag:
-        await event.respond("⛔ Tək Tək Tağ Prosesi Dayandırıldı",
+      usrtxt += f"[{random.choice(reng)}](tg://user?id={usr.id}) "
+      if event.chat_id not in Husu_tag:
+        await event.respond("⛔ Rənglərlə Tağ Prosesi Dayandırıldı",
                     buttons=(
                       [
-                      Button.inline(f"yeniden", data="yeniden")
+                      Button.inline(f"🙄Təmirdə", data="yeniden")
                       ]
                     )
                   )
