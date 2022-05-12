@@ -240,7 +240,7 @@ async def tektag(event):
     await client.send_message(event.chat_id, "❄️ Tək-Tək Tağ Başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
-                      Button.inline(f"{dayandir}", data="cancel")
+                      Button.inline(f"dayandir", data="cancel")
                       ]
                     )
                   ) 
@@ -254,7 +254,7 @@ async def tektag(event):
         await event.respond("⛔ Tək Tək Tağ Prosesi Dayandırıldı",
                     buttons=(
                       [
-                      Button.inline(f"{yeniden}", data="yeniden")
+                      Button.inline(f"yeniden", data="yeniden")
                       ]
                     )
                   )
