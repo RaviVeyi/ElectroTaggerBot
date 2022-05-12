@@ -285,7 +285,7 @@ async def son_durum(event):
     sender = await event.get_sender()
     if sender.id not in ozel_list:
       return
-    await event.respond(f"**Bot Güncellendi✅\n@ElectroTaggerBot Güncel Verileri 🖥️**\n\n**Toplam Grub: `{len(grup_sayi)}`\n\nAnlık Çalışan Grub: `{len(anlik_calisan)}`\nSahibim:`{len(sahib)}`**")
+    await event.respond(f"**Bot Güncellendi✅\n`{len(USERNAME)}`Güncel Verileri 🖥️**\n\n**Toplam Grub: `{len(grup_sayi)}`\n\nAnlık Çalışan Grub: `{len(anlik_calisan)}`\nSahibim:`{len(sahib)}`**")
 
 ###Broadcast
 
