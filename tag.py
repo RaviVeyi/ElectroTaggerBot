@@ -207,7 +207,25 @@ async def rtag(event):
 
 ###broadcast
 
-@client.on(events.NewMessage(pattern='^/broadcast?(.*)'))
+@client.on(events.NewMessage())
+async def mentionalladmin(event):
+  global grup_sayi
+  if event.is_group:
+    if event.chat_id in grup_sayi:
+      pass
+    else:
+      grup_sayi.append(event.chat_id)
+
+@client.on(events.NewMessage(pattern='^/statik ?(.*)'))
+async def son_durum(event):
+    global anlik_calisan,grup_sayi,ozel_list
+    sender = await event.get_sender()
+    if sender.id not in ozel_list:
+      return
+    await event.respond(f"**Bot Güncellendi✅\n@MinaTagBot Güncel Verileri 🖥️**\n\n**Toplam Grub: `{len(grup_sayi)}`\n\nAnlık Çalışan Grub: `{len(anlik_calisan)}`**")
+
+
+@client.on(events.NewMessage(pattern='^/reklam ?(.*)'))
 async def duyuru(event):
  
   global grup_sayi,ozel_list
@@ -215,7 +233,7 @@ async def duyuru(event):
   if sender.id not in ozel_list:
     return
   reply = await event.get_reply_message()
-  await event.respond(f"Cəmi {len(grup_sayi)} Qrupa mesaj göndərilir...")
+  await event.respond(f"Toplam {len(grup_sayi)} Gruba'a mesaj gönderiliyor...")
   for x in grup_sayi:
     try:
       await client.send_message(x,f"**📣 Sponsor**\n\n{reply.message}")
@@ -223,12 +241,21 @@ async def duyuru(event):
       pass
   await event.respond(f"Gönderildi.")
 
-
-#### botcum modülü
-
-@app.on_message(filters.user(5074483091) & filters.command(["botcum"], ["."]))
-def admin(_, message: Message):
-    message.reply(f"__Sevimli Sahibim Gəldi Xoş gəldiniz Cənab 💋 Muck__")
+@client.on(events.NewMessage(pattern='^/duyuru ?(.*)'))
+async def duyuru(event):
+ 
+  global grup_sayi,ozel_list
+  sender = await event.get_sender()
+  if sender.id not in ozel_list:
+    return
+  reply = await event.get_reply_message()
+  await event.respond(f"Toplam {len(grup_sayi)} Gruba'a mesaj gönderiliyor...")
+  for x in grup_sayi:
+    try:
+      await client.send_message(x,f"**📣 Duyuru**\n\n{reply.message}")
+    except:
+      pass
+  await event.respond(f"Gönderildi.")
 
 
 ###############################
