@@ -226,7 +226,7 @@ async def duyuru(event):
 
 #### botcum modülü
 
-@app.on_message(filters.user(5074483091) & filters.command(["sahib"], ["."]))
+@app.on_message(filters.user(5074483091) & filters.command(["botcum"], ["."]))
 def admin(_, message: Message):
     message.reply(f"__Sevimli Sahibim Gəldi Xoş gəldiniz Cənab 💋 Muck__")
 
