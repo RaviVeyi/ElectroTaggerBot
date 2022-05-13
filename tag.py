@@ -382,9 +382,10 @@ async def utag(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""        
-        
+####################       
+#Adlarla Tağ
 
-atag = ( "🐰Dovşan","🦁Şir","💍 Evli",
+ad = ( "🐰Dovşan","🦁Şir","💍 Evli",
 "🐶 İT","🐻 Ayı","🐭 Siçan",
 "🥰 Sevimli","😜 Subay","😎Sevgili",
 "👨‍👩‍👦‍👦 Ailə","🤑 Varlı","🕵‍♂ Vəkil",
