@@ -327,7 +327,7 @@ async def rtag(event):
 ######################
 
 #ürəklərlə Tağ
-urek = "❤️ 🧡 💛 💚 💙 💜 🖤 💘 💝 ❤️        🧡 💛 💚 💙 💜 🖤 💘 💝".split(" ") 
+urek = "❤️ 🧡 💛 💚 💙 💜 🖤 💘 💝 ❤️   🧡 💛 💚 💙 💜 🖤 💘 💝".split(" ") 
         
 @client.on(events.NewMessage(pattern="^/utag ?(.*)"))
 async def utag(event):
@@ -355,7 +355,7 @@ async def utag(event):
     return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
     
   if mode == "text_on_cmd":
-    await client.send_message(event.chat_id, "❄️ Rənglərlə Tağ Başladı\n⏱️ İnterval - 2 saniyə",
+    await client.send_message(event.chat_id, "❄️ Ürəklərlə Tağ Başladı\n⏱️ İnterval - 2 saniyə",
                     buttons=(
                       [
                       Button.inline(f"dayandir", data="cancel")
@@ -369,7 +369,7 @@ async def utag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(urek)}](tg://user?id={usr.id}) "
       if event.chat_id not in Husu_tag:
-        await event.respond("⛔ Rənglərlə Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Ürəklərlə Tağ Prosesi Dayandırıldı",
                     buttons=(
                       [
                       Button.inline(f"🙄Təmirdə", data="yeniden")
@@ -377,7 +377,7 @@ async def utag(event):
                     )
                   )
         return
-      if usrnum == 3:
+      if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
         await asyncio.sleep(2)
         usrnum = 0
