@@ -384,6 +384,73 @@ async def utag(event):
         usrtxt = ""        
         
 
+atag = ( "🐰Dovşan","🦁Şir","💍 Evli",
+"🐶 İT","🐻 Ayı","🐭 Siçan",
+"🥰 Sevimli","😜 Subay","😎Sevgili",
+"👨‍👩‍👦‍👦 Ailə","🤑 Varlı","🕵‍♂ Vəkil",
+"🐒 Meymun","🐣 Cücə","🦊Tülkü"
+"👩‍⚕Həkim","👨‍🏫 Müəllim","👨‍🍳 Aşbaz",
+"👩‍🏫 Müəllimə","🧚‍♀ Mələk","😊 Dəyərli",
+"Gözəl💄","Çirkin😒","Prenses 🧝‍♀",
+"🦠 Karona","🤭 Dəcəl","😡 Lovğa",
+"🙈Utancaq","😎 Səbirli","🧑‍🔬 Ağıllı"
+)
+@client.on(events.NewMessage(pattern="^/atag ?(.*)"))
+async def atag(event):
+  global Husu_tag
+  if event.is_private:
+    return await event.respond(f"{noqrup}")
+  
+  admins = []
+  async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
+    admins.append(admin.id)
+  if not event.sender_id in admins:
+    return await event.respond(f"{noadmin}")
+  
+  if event.pattern_match.group(1):
+    mode = "text_on_cmd"
+    msg = event.pattern_match.group(1)
+  elif event.reply_to_msg_id:
+    mode = "text_on_reply"
+    msg = event.reply_to_msg_id
+    if msg == None:
+        return await event.respond("__Köhnə mesajları görə bilmirəm! (bu mesaj məni qrupa əlavə etməmişdən qabaq yazılıb)__")
+  elif event.pattern_match.group(1) and event.reply_to_msg_id:
+    return await event.respond("__Tağ mesajı yazmadın!__")
+  else:
+    return await event.respond("__Tağ etməy üçün bir mesaj yanıtlayın və ya bir mətn yazın!__")
+    
+  if mode == "text_on_cmd":
+    await client.send_message(event.chat_id, "❄️ Adlarla Tağ Başladı\n⏱️ İnterval - 2 saniyə",
+                    buttons=(
+                      [
+                      Button.inline(f"dayandir", data="cancel")
+                      ]
+                    )
+                  ) 
+    Husu_tag.append(event.chat_id)
+    usrnum = 0
+    usrtxt = ""
+    async for usr in client.iter_participants(event.chat_id):
+      usrnum += 1
+      usrtxt += f"[{random.choice(atag)}](tg://user?id={usr.id}) "
+      if event.chat_id not in Husu_tag:
+        await event.respond("⛔ Adlarla Tağ Prosesi Dayandırıldı",
+                    buttons=(
+                      [
+                      Button.inline(f"🙄Təmirdə", data="yeniden")
+                      ]
+                    )
+                  )
+        return
+      if usrnum == 5:
+        await client.send_message(event.chat_id, f"{usrtxt} {msg}")
+        await asyncio.sleep(2)
+        usrnum = 0
+        usrtxt = ""
+
+
+
 
 
 
