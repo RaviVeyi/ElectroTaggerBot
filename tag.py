@@ -456,7 +456,7 @@ async def atag(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(atag)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(ad)}](tg://user?id={usr.id}) "
       if event.chat_id not in Husu_tag:
         await event.respond("⛔ Adlarla Tağ Prosesi Dayandırıldı",
                     buttons=(
