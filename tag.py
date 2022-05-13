@@ -327,8 +327,7 @@ async def rtag(event):
 ######################
 
 #ürəklərlə Tağ
-ürek = "❤️ 🧡 💛 💚 💙 💜 🖤 💘 💝 ❤️        🧡 💛 💚 💙 💜 🖤 💘 💝",
-        .split(" ") 
+urek = "❤️ 🧡 💛 💚 💙 💜 🖤 💘 💝 ❤️        🧡 💛 💚 💙 💜 🖤 💘 💝".split(" ") 
         
 @client.on(events.NewMessage(pattern="^/utag ?(.*)"))
 async def utag(event):
@@ -368,7 +367,7 @@ async def utag(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(ürek)}](tg://user?id={usr.id}) "
+      usrtxt += f"[{random.choice(urek)}](tg://user?id={usr.id}) "
       if event.chat_id not in Husu_tag:
         await event.respond("⛔ Rənglərlə Tağ Prosesi Dayandırıldı",
                     buttons=(
