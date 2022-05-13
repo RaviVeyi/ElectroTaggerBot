@@ -386,7 +386,7 @@ async def utag(event):
 #Adlarla Tağ
 
 ad = ( "🐰Dovşan",
-"🦁Şir","
+"🦁Şir",
 "💍 Evli",
 "🐶 İT",
 "🐻 Ayı",
