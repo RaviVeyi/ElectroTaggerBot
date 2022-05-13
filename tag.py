@@ -520,7 +520,6 @@ async def duyuru(event):
 
 ###############################
 
-
-print(">> Bot Super İşləyir 😎 <<")
+print(">> Bot Super İşləyir 😎 Sahibim 【H】【U】【S】【E】【Y】【N】 <<")
 client.run_until_disconnected()
 run_until_disconnected()
