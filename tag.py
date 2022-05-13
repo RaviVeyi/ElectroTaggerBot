@@ -385,17 +385,39 @@ async def utag(event):
 ####################       
 #Adlarla Tağ
 
-ad = ( "🐰Dovşan","🦁Şir","💍 Evli",
-"🐶 İT","🐻 Ayı","🐭 Siçan",
-"🥰 Sevimli","😜 Subay","😎Sevgili",
-"👨‍👩‍👦‍👦 Ailə","🤑 Varlı","🕵‍♂ Vəkil",
-"🐒 Meymun","🐣 Cücə","🦊Tülkü"
-"👩‍⚕Həkim","👨‍🏫 Müəllim","👨‍🍳 Aşbaz",
-"👩‍🏫 Müəllimə","🧚‍♀ Mələk","😊 Dəyərli",
-"Gözəl💄","Çirkin😒","Prenses 🧝‍♀",
-"🦠 Karona","🤭 Dəcəl","😡 Lovğa",
-"🙈Utancaq","😎 Səbirli","🧑‍🔬 Ağıllı"
+ad = ( "🐰Dovşan",
+"🦁Şir","
+"💍 Evli",
+"🐶 İT",
+"🐻 Ayı",
+"🐭 Siçan",
+"🥰 Sevimli",
+"😜 Subay",
+"😎Sevgili",
+"👨‍👩‍👦‍👦 Ailə",
+"🤑 Varlı",
+"🕵‍♂ Vəkil",
+"🐒 Meymun",
+"🐣 Cücə",
+"🦊Tülkü"
+"👩‍⚕Həkim",
+"👨‍🏫 Müəllim",
+"👨‍🍳 Aşbaz",
+"👩‍🏫 Müəllimə",
+"🧚‍♀ Mələk",
+"😊 Dəyərli",
+"Gözəl💄",
+"Çirkin😒",
+"Prenses 🧝‍♀",
+"🦠 Karona",
+"🤭 Dəcəl",
+"😡 Lovğa",
+"🙈Utancaq",
+"😎 Səbirli",
+"🧑‍🔬 Ağıllı"
 )
+
+
 @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
 async def atag(event):
   global Husu_tag
@@ -444,12 +466,14 @@ async def atag(event):
                     )
                   )
         return
-      if usrnum == 5:
+      if usrnum == 3:
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
+######################
 
+##Cümlələr lə Tağ
 
 
 
