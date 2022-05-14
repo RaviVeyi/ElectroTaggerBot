@@ -44,7 +44,6 @@ async def cancel(event):
   
   
   
-    RECIVER = 'me'
     link = 'https://picsum.photos/id/237/200/300'
 
     await client.send_message(RECIVER, 'this is sample')
