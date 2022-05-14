@@ -43,26 +43,6 @@ async def cancel(event):
   
   
   
-  
-    link = 'https://telegra.ph//file/56ee0253fed1cb1061b5f.jpg'
-
-    await client.send_message(RECIVER, 'this is sample')
-    await client.send_message(RECIVER, link)
-    await client.send_message(RECIVER, link, link_preview=False)
-    await client.send_message(RECIVER, link, file='dog.jpg')
-    await client.send_message(RECIVER, link, file=['dog.jpg', 'song.mp3'], force_document=True)
-    await client.send_message(RECIVER,'from internet',file=link)
-
-    await client.run_until_disconnected()
-
-asyncio.run(main())
-  
-  
-  
-  
-  
-  
-  
 # Başlanğıc Mesajı
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
