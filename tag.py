@@ -28,14 +28,13 @@ grup_sayi = []
 
 Husu_tag = []
   
-  
+
   
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event): 
   global Husu_tag 
   Husu_tag.remove(event.chat_id)
 
-  
 @client.on(events.callbackquery.CallbackQuery(data="cancel"))
 async def cancel(event):
   global Husu_tag
