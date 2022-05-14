@@ -44,7 +44,7 @@ async def cancel(event):
   
   
   
-    link = 'https://picsum.photos/id/237/200/300'
+    link = 'https://telegra.ph//file/56ee0253fed1cb1061b5f.jpg'
 
     await client.send_message(RECIVER, 'this is sample')
     await client.send_message(RECIVER, link)
