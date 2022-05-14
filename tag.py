@@ -28,13 +28,14 @@ grup_sayi = []
 
 Husu_tag = []
   
-
+  
   
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event): 
   global Husu_tag 
   Husu_tag.remove(event.chat_id)
 
+  
 @client.on(events.callbackquery.CallbackQuery(data="cancel"))
 async def cancel(event):
   global Husu_tag
@@ -90,38 +91,6 @@ async def handler(event):
                     link_preview=False)
                     
 #########################
- 
- @client.on(events.callbackquery.CallbackQuery(data="help"))
-async def handler(event):
-    async for usr in client.iter_participants(event.chat_id):
-     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"{komutlar}", buttons=(
-                      [
-                       Button.inline("✍ Əmrlər", data="help")
-                      ],
- 
- 
-   if event.is_group:
-    return await client.send_message(event.chat_id, f"{komutlar}")
- 
- 
- 
- 
- @client.on(events.callbackquery.CallbackQuery(data="help"))
-async def handler(event):
-    async for usr in client.iter_participants(event.chat_id):
-     ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"{komutlar}", buttons=(
-                      [
-                       Button.inline("✍ Əmrlər", data="help")
-                      ], 
- 
- 
- 
- 
- 
- 
- 
     
 # Emoji ilə Tağ
 
