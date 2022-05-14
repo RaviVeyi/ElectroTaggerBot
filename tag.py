@@ -44,7 +44,6 @@ async def cancel(event):
   
   
 # Başlanğıc Mesajı
-@client.on(events._profile_photo)('https://telegra.ph//file/56ee0253fed1cb1061b5f.jpg')
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   if event.is_private:
