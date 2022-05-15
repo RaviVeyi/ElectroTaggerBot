@@ -406,7 +406,7 @@ async def utag(event):
         usrnum = 0
         usrtxt = ""
         
- @client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
   global Husu_tag
   Husu_tag.remove(event.chat_id)             
