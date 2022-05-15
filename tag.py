@@ -149,6 +149,11 @@ async def etag(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
+        
+@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+async def cancel(event):
+  global Husu_tag
+  Husu_tag.remove(event.chat_id)        
 
 #########################
     
@@ -207,6 +212,12 @@ async def tag(event):
         usrnum = 0
         usrtxt = ""
         
+        
+@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+async def cancel(event):
+  global Husu_tag
+  Husu_tag.remove(event.chat_id)              
+        
 #########################
 
 #tek-tek tağ 
@@ -264,7 +275,13 @@ async def tektag(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
-    
+  
+  
+@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+async def cancel(event):
+  global Husu_tag
+  Husu_tag.remove(event.chat_id)        
+  
 #########################
 
 # renk ile etiketleme modülü
@@ -324,6 +341,12 @@ async def rtag(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
+        
+@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+async def cancel(event):
+  global Husu_tag
+  Husu_tag.remove(event.chat_id)              
+        
 ######################
 
 #ürəklərlə Tağ
@@ -381,7 +404,13 @@ async def utag(event):
         await client.send_message(event.chat_id, f"{usrtxt} {msg}")
         await asyncio.sleep(2)
         usrnum = 0
-        usrtxt = ""        
+        usrtxt = ""
+        
+ @client.on(events.NewMessage(pattern='^(?i)/cancel'))
+async def cancel(event):
+  global Husu_tag
+  Husu_tag.remove(event.chat_id)             
+        
 ####################       
 #Adlarla Tağ
 
@@ -472,6 +501,12 @@ async def atag(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
+        
+@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+async def cancel(event):
+  global Husu_tag
+  Husu_tag.remove(event.chat_id)              
+        
 ######################
 
 ##Cümlələr lə Tağ
@@ -491,13 +526,13 @@ async def mentionalladmin(event):
     else:
       grup_sayi.append(event.chat_id)
 
-@client.on(events.NewMessage(pattern='^/stat ?(.*)'))
+@client.on(events.NewMessage(pattern='^/stats ?(.*)'))
 async def son_durum(event):
     global anlik_calisan,grup_sayi,ozel_list
     sender = await event.get_sender()
     if sender.id not in ozel_list:
       return
-    await event.respond(f"**Bot Güncellendi✅\n@ElectroTaggerBot Güncel Verileri 🖥️**\n\n**Toplam Grub: `{len(grup_sayi)}`\n\nAnlık Çalışan Grub: `{len(anlik_calisan)}`**")
+    await event.respond(f"**Bot Güncellendi✅\n[Electro](http://t.me/ElectroTaggerBot)") Güncel Verileri 🖥️**\n\n**Toplam Grub: `{len(grup_sayi)}`\n\nAnlık Çalışan Grub: `{len(anlik_calisan)}`**")
 
 ###Broadcast
 
