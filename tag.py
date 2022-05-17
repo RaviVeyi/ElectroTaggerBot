@@ -28,8 +28,7 @@ grup_sayi = []
 
 Husu_tag = []
 
-Huseyn_H = {}
-Husi_tag = {}
+Huseyn_H = {}  
   
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
@@ -44,18 +43,6 @@ async def cancel(event):
   global Husu_tag
   Husu_tag.remove(event.chat_id)
   
-    sender = await event.get_sender()
-    Husi_tag = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in Huseyn_H:await event.respond(f"**✅ Etiket İşlemi Başarıyla Tamamlandı !.\n\nEtiketlerin Sayları: {Huseyn_H[event.chat_id]}\n\nEtiket İşlemini Başlatan: {Husi_tag}**")   
-  
-  
-####################  
-  
-#Alive Mesajı
-
-@client.on(events.NewMessage(pattern="^/alive$"))
-async def info(event):
-  await event.reply("**Merhaba Benim Ve Sahibim Hakkında Bilgi\n\nPython: 3.8.2\nKütüphanem: Telethon\n\nSahibim: @hi Gruplarınızda Üyeleri Etiketlemek için Yaratılmışım**",
   
   
 # Başlanğıc Mesajı
@@ -96,15 +83,15 @@ async def handler(event):
                     ),
                     link_preview=False)
 # gece kusu
-@client.on(events.callbackquery.CallbackQuery(data="help"))
+@client.on(events.callbackquery.CallbackQuery(data="/help"))
 async def handler(event):
+    async def handler(event):
     await event.edit(f"{komutlar}", buttons=(
                       [
-                      Button.inline("Geri Qayıt", data="start")
+                      Button.inline("◀️ Geri", data="start")
                       ]
                     ),
                     link_preview=False)
-                    
 #########################
     
 # Emoji ilə Tağ
@@ -164,10 +151,6 @@ async def etag(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
-        
-    sender = await event.get_sender()
-    Husi_tag = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in Huseyn_H:await event.respond(f"**✅ Etiket İşlemi Başarıyla Tamamlandı !.\n\nEtiketlerin Sayları: {Huseyn_H[event.chat_id]}\n\nEtiket İşlemini Başlatan: {Husi_tag}**")        
         
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
@@ -231,10 +214,6 @@ async def tag(event):
         usrnum = 0
         usrtxt = ""
         
-    sender = await event.get_sender()
-    Husi_tag = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in Huseyn_H:await event.respond(f"**✅ Etiket İşlemi Başarıyla Tamamlandı !.\n\nEtiketlerin Sayları: {Huseyn_H[event.chat_id]}\n\nEtiket İşlemini Başlatan: {Husi_tag}**") 
-  
         
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
@@ -299,9 +278,6 @@ async def tektag(event):
         usrnum = 0
         usrtxt = ""
   
-      sender = await event.get_sender()
-    Husi_tag = f"[{sender.first_name}](tg://user?id={sender.id})"
-    if event.chat_id in Huseyn_H:await event.respond(f"**✅ Etiket İşlemi Başarıyla Tamamlandı !.\n\nEtiketlerin Sayları: {Huseyn_H[event.chat_id]}\n\nEtiket İşlemini Başlatan: {Husi_tag}**")
   
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
