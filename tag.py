@@ -554,10 +554,6 @@ async def duyuru(event):
       pass
   await event.respond(f"Gönderildi.")
 
-###############################
-
-@client.on(events.NewMessage(pattern='^/alive'))async def event(ups): if ups.sender_id == 5188815198: await ups.reply("**Huseyn sahibim naber? Ben çalışıyorum. ❤️😳**") elif ups.sender_id == 5188815198: await ups.reply("**Huseyn sahibim naber? Ben çalışıyorum. ❤️😳**") else: await ups.reply("**Seni tanımıyorum. 🙄**")
-
 
 ###############################
 
