@@ -13,7 +13,7 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.events import StopPropagation
-from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group, komek
+from config import client, USERNAME, startmesaj, qrupstart, komutlar, sahib, support, group
 
 logging.basicConfig(
     level=logging.INFO,
@@ -93,15 +93,6 @@ async def handler(event):
                     link_preview=False)
                     
 #########################
- 
-@client.on(events.callbackquery.CallbackQuery(data="komek"))
-async def handler(event):
-    await event.edit(f"{komutlar}", buttons=(
-                      [
-                      Button.inline("Geri Qayıt", data="start")
-                      ]
-                    ),
-                    link_preview=False) 
     
 # Emoji ilə Tağ
 
