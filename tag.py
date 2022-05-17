@@ -44,6 +44,20 @@ async def cancel(event):
   global Husu_tag
   Husu_tag.remove(event.chat_id)
   
+####################  
+  
+#Alive Mesajı
+
+@client.on(events.NewMessage(pattern="^/alive$"))
+async def info(event):
+  await event.reply("**Merhaba Benim Ve Sahibim Hakkında Bilgi\n\nPython: 3.8.2\nKütüphanem: Telethon\n\nSahibim: @hi Gruplarınızda Üyeleri Etiketlemek için Yaratılmışım**",
+                    buttons=(
+                      [
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
+                      ],
+                    ),
+                    link_preview=False
+                   )
   
   
 # Başlanğıc Mesajı
