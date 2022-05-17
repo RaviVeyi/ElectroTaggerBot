@@ -83,14 +83,15 @@ async def handler(event):
                     ),
                     link_preview=False)
 # gece kusu
-@client.on(events.callbackquery.CallbackQuery(data="/help"))
+@client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
     await event.edit(f"{komutlar}", buttons=(
                       [
-                      Button.inline("◀️ Geri", data="start")
+                      Button.inline("Geri Qayıt", data="start")
                       ]
                     ),
                     link_preview=False)
+                    
 #########################
     
 # Emoji ilə Tağ
