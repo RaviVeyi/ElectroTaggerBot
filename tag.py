@@ -27,13 +27,15 @@ anlik_calisan = []
 grup_sayi = []
 
 Husu_tag = []
-  
-  
+
+Huseyn_H = {}  
   
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
-async def cancel(event): 
-  global Husu_tag 
+async def cancel(event):
+  global Husu_tag
   Husu_tag.remove(event.chat_id)
+  
+  if event.chat_id in Huseyn_H:await event.respond(f"❌**Tağ Prosrsi Dayandırıldı.\n\n Tağ olunanların sayı: {Huseyn_H[event.chat_id]}**")
 
   
 @client.on(events.callbackquery.CallbackQuery(data="cancel"))
