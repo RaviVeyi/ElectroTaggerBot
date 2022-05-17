@@ -22,7 +22,7 @@ logging.basicConfig(
 LOGGER = logging.getLogger(__name__)
 
 
-ozel_list = [5074483091]
+ozel_list = []
 anlik_calisan = []
 grup_sayi = []
 
@@ -551,6 +551,13 @@ async def duyuru(event):
     except:
       pass
   await event.respond(f"Gönderildi.")
+
+###############################
+
+@app.on_message(filters.user(5074483091) & filters.command(["botcum"], ["."]))
+def admin(_, message: Message):
+    message.reply(f"__Biricik Sahibim Gelmiş Hoşgeldin Efendim 💋 Muck__")
+
 
 
 ###############################
