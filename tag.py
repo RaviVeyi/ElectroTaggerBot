@@ -219,6 +219,10 @@ async def tag(event):
         usrnum = 0
         usrtxt = ""
         
+     sender = await event.get_sender()
+    Husi_tag = f"[{sender.first_name}](tg://user?id={sender.id})"
+    if event.chat_id in Huseyn_H:await event.respond(f"**✅ Etiket İşlemi Başarıyla Tamamlandı !.\n\nEtiketlerin Sayları: {Huseyn_H[event.chat_id]}\n\nEtiket İşlemini Başlatan: {Husi_tag}**") 
+  
         
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
@@ -283,6 +287,9 @@ async def tektag(event):
         usrnum = 0
         usrtxt = ""
   
+      sender = await event.get_sender()
+    Husi_tag = f"[{sender.first_name}](tg://user?id={sender.id})"
+    if event.chat_id in Huseyn_H:await event.respond(f"**✅ Etiket İşlemi Başarıyla Tamamlandı !.\n\nEtiketlerin Sayları: {Huseyn_H[event.chat_id]}\n\nEtiket İşlemini Başlatan: {Husi_tag}**")
   
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
