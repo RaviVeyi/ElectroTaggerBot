@@ -44,6 +44,11 @@ async def cancel(event):
   global Husu_tag
   Husu_tag.remove(event.chat_id)
   
+    sender = await event.get_sender()
+    Husi_tag = f"[{sender.first_name}](tg://user?id={sender.id})"
+    if event.chat_id in Huseyn_H:await event.respond(f"**✅ Etiket İşlemi Başarıyla Tamamlandı !.\n\nEtiketlerin Sayları: {Huseyn_H[event.chat_id]}\n\nEtiket İşlemini Başlatan: {Husi_tag}**")   
+  
+  
 ####################  
   
 #Alive Mesajı
@@ -51,13 +56,6 @@ async def cancel(event):
 @client.on(events.NewMessage(pattern="^/alive$"))
 async def info(event):
   await event.reply("**Merhaba Benim Ve Sahibim Hakkında Bilgi\n\nPython: 3.8.2\nKütüphanem: Telethon\n\nSahibim: @hi Gruplarınızda Üyeleri Etiketlemek için Yaratılmışım**",
-                    buttons=(
-                      [
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
-                      ],
-                    ),
-                    link_preview=False
-                   )
   
   
 # Başlanğıc Mesajı
