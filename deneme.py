@@ -98,6 +98,35 @@ async def handler(event):
 
 
 
+
+# Grup mesaj geri dön butonu
+@client.on(events.callbackquery.CallbackQuery(data="kurt"))
+async def handler(event):
+    await event.edit(f"Hakkında bilgi almak istediğiniz rolü seçin.", buttons=(
+                      [
+                      Button.inline("Kurtadam 🐺", data="gozcu")
+                      Button.inline("Alfa Kurt ⚡️", data="sarhos")
+                      ],
+                      [
+                      Button.inline("Falcı 🔮", data="yancı")
+                      Button.inline("Yavru Kurt 🐶", data="seyirci")
+                      ],
+                      [
+                      Button.inline("Haydut 🦉", data="silahsor")
+                      Button.inline("Mistik ☄️", data="kmelek")
+                      ],
+                      [
+                      Button.inline("Düzenbaz Kurt 🐑", data="mason")
+                      Button.inline("Kara Melek 👼🐺", data="dedektif")
+                      ],
+                      [
+                      Button.inline("👈 Geri", data="grstart")
+                      ]
+                    ),
+                    link_preview=False)
+
+
+
 @client.on(events.callbackquery.CallbackQuery(data="tavci"))
 async def handler(event):
     await event.edit(f"{tavci}", buttons=(
@@ -321,6 +350,83 @@ async def handler(event):
 @client.on(events.callbackquery.CallbackQuery(data="lanetli"))
 async def handler(event):
     await event.edit(f"{lanetli}", buttons=(
+                      [
+                      Button.inline("👈 Geri", data="grstart")
+                      ],
+                    ),
+                    link_preview=False)
+
+
+@client.on(events.callbackquery.CallbackQuery(data="kurtadam"))
+async def handler(event):
+    await event.edit(f"{kurtadam}", buttons=(
+                      [
+                      Button.inline("👈 Geri", data="grstart")
+                      ],
+                    ),
+                    link_preview=False)
+
+
+@client.on(events.callbackquery.CallbackQuery(data="alfakurt"))
+async def handler(event):
+    await event.edit(f"{alfakurt}", buttons=(
+                      [
+                      Button.inline("👈 Geri", data="grstart")
+                      ],
+                    ),
+                    link_preview=False)
+
+@client.on(events.callbackquery.CallbackQuery(data="karmelek"))
+async def handler(event):
+    await event.edit(f"{karmelek}", buttons=(
+                      [
+                      Button.inline("👈 Geri", data="grstart")
+                      ],
+                    ),
+                    link_preview=False)
+
+
+@client.on(events.callbackquery.CallbackQuery(data="mistik"))
+async def handler(event):
+    await event.edit(f"{mistik}", buttons=(
+                      [
+                      Button.inline("👈 Geri", data="grstart")
+                      ],
+                    ),
+                    link_preview=False)
+
+@client.on(events.callbackquery.CallbackQuery(data="haydut"))
+async def handler(event):
+    await event.edit(f"{haydut}", buttons=(
+                      [
+                      Button.inline("👈 Geri", data="grstart")
+                      ],
+                    ),
+                    link_preview=False)
+
+
+@client.on(events.callbackquery.CallbackQuery(data="duzenbaz"))
+async def handler(event):
+    await event.edit(f"{duzenbaz}", buttons=(
+                      [
+                      Button.inline("👈 Geri", data="grstart")
+                      ],
+                    ),
+                    link_preview=False)
+
+@client.on(events.callbackquery.CallbackQuery(data="falci"))
+async def handler(event):
+    await event.edit(f"{falci}", buttons=(
+                      [
+                      Button.inline("👈 Geri", data="grstart")
+                      ],
+                    ),
+                    link_preview=False)
+
+
+@client.on(events.callbackquery.CallbackQuery(data="yavrukurt"))
+async def handler(event):
+    await event.edit(f"{yavrukurt}", buttons=(
                       [
                       Button.inline("👈 Geri", data="grstart")
                       ],
