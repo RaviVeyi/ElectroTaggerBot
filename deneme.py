@@ -104,20 +104,20 @@ async def handler(event):
 async def handler(event):
     await event.edit(f"Hakkında bilgi almak istediğiniz rolü seçin.", buttons=(
                       [
-                      Button.inline("Kurtadam 🐺", data="gozcu")
-                      Button.inline("Alfa Kurt ⚡️", data="sarhos")
+                      Button.inline("Kurtadam 🐺", data="kurtadam")
+                      Button.inline("Alfa Kurt ⚡️", data="alfakurt")
                       ],
                       [
-                      Button.inline("Falcı 🔮", data="yancı")
-                      Button.inline("Yavru Kurt 🐶", data="seyirci")
+                      Button.inline("Falcı 🔮", data="falci")
+                      Button.inline("Yavru Kurt 🐶", data="yavrukurt")
                       ],
                       [
-                      Button.inline("Haydut 🦉", data="silahsor")
-                      Button.inline("Mistik ☄️", data="kmelek")
+                      Button.inline("Haydut 🦉", data="haydut")
+                      Button.inline("Mistik ☄️", data="mistik")
                       ],
                       [
-                      Button.inline("Düzenbaz Kurt 🐑", data="mason")
-                      Button.inline("Kara Melek 👼🐺", data="dedektif")
+                      Button.inline("Düzenbaz Kurt 🐑", data="duzenbaz")
+                      Button.inline("Kara Melek 👼🐺", data="karmelek")
                       ],
                       [
                       Button.inline("👈 Geri", data="grstart")
