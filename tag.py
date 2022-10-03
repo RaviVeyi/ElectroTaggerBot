@@ -56,9 +56,9 @@ async def start(event):
                        Button.inline("✍ Əmrlər", data="help")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
-                     [Button.url('🥳 Söhbət Qrupu', f'https://t.me/{group}')],
-                      [Button.url('📣 Kanal', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
+                     [Button.url('🥳 Söhbət Qrupu', f'https://t.me/lovelesslifee')],
+                      Button[.url('📣 Kanal', f'https://t.me/lovelesslifee')],
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/BenimHakann')]
                     ),
                     link_preview=False)
                     
@@ -77,9 +77,9 @@ async def handler(event):
                        Button.inline("✍ Əmrlər", data="help")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
-                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
-                      [Button.url('📣 Kanal', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
+                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/lovelesslifee')],
+                      [Button.url('📣 Kanal', f'https://t.me/lovelesslifee')],
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/BenimHakann')]
                     ),
                     link_preview=False)
 # gece kusu
@@ -138,7 +138,7 @@ async def etag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in Husu_tag:
-        await event.respond("⛔ Emoji Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Emoji Tağ Prosesi Dayandırıldı\n KANALA ABUNE OLUN @lovelesslifee",
                     buttons=(
                       [
                       Button.inline(f"🙄Təmirdə", data="yeniden")
@@ -200,7 +200,7 @@ async def tag(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in Husu_tag:
-        await event.respond("⛔ Tək Tək Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Tək Tək Tağ Prosesi Dayandırıldı\n KANALA ABUNE OLUN @lovelesslifee",
                     buttons=(
                       [
                       Button.inline(f"🙄Təmirdə", data="yeniden")
@@ -264,7 +264,7 @@ async def tektag(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in Husu_tag:
-        await event.respond("⛔ Tək Tək Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Tək Tək Tağ Prosesi Dayandırıldı\n KANAL ABUNE OLUN @lovelesslifee",
                     buttons=(
                       [
                       Button.inline(f"yeniden", data="yeniden")
@@ -330,7 +330,7 @@ async def rtag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(reng)}](tg://user?id={usr.id}) "
       if event.chat_id not in Husu_tag:
-        await event.respond("⛔ Rənglərlə Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Rənglərlə Tağ Prosesi Dayandırıldı\n KANALA ABUNE OLUN @lovelesslifee",
                     buttons=(
                       [
                       Button.inline(f"🙄Təmirdə", data="yeniden")
@@ -394,7 +394,7 @@ async def utag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(urek)}](tg://user?id={usr.id}) "
       if event.chat_id not in Husu_tag:
-        await event.respond("⛔ Ürəklərlə Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Ürəklərlə Tağ Prosesi Dayandırıldı\n KANALA ABUNE OLUN @lovelesslifee",
                     buttons=(
                       [
                       Button.inline(f"🙄Təmirdə", data="yeniden")
@@ -490,7 +490,7 @@ async def atag(event):
       usrnum += 1
       usrtxt += f"[{random.choice(ad)}](tg://user?id={usr.id}) "
       if event.chat_id not in Husu_tag:
-        await event.respond("⛔ Adlarla Tağ Prosesi Dayandırıldı",
+        await event.respond("⛔ Adlarla Tağ Prosesi Dayandırıldı\n KANALA ABUNE OLUN @lovelesslifee",
                     buttons=(
                       [
                       Button.inline(f"🙄Təmirdə", data="yeniden")
@@ -534,7 +534,7 @@ async def son_durum(event):
     sender = await event.get_sender()
     if sender.id not in ozel_list:
       return
-    await event.respond(f"**Bot Güncellendi✅\n[Electro](http://t.me/ElectroTaggerBot) Güncel Verileri 🖥️**\n\n**Toplam Grub: `{len(grup_sayi)}`\n\nAnlık Çalışan Grub: `{len(anlik_calisan)}`**")
+    await event.respond(f"**Bot Güncellendi✅\n[Electro](http://t.me/Naz_Tagger_bot) Güncel Verileri 🖥️**\n\n**Toplam Grub: `{len(grup_sayi)}`\n\nAnlık Çalışan Grub: `{len(anlik_calisan)}`**")
 
 ###Broadcast
 
@@ -557,6 +557,6 @@ async def duyuru(event):
 
 ###############################
 
-print(">> Bot Super İşləyir 😎 Sahibim 【H】【U】【S】【E】【Y】【N】 <<")
+print(">> Bot Super İşləyir 😎 Sahibim 【H】【A】【K】【A】【N】 <<")
 client.run_until_disconnected()
 run_until_disconnected()
