@@ -1,5 +1,5 @@
 #################################
-# Electro Tagger Bot #
+# Vanessa Tagger Bot #
 #################################
 #  Sahib - @HuseynH 
 # Reponu Öz Adına Çıxaran Peysərdi
@@ -58,7 +58,7 @@ async def start(event):
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                      [Button.url('🥳 Söhbət Qrupu', f'https://t.me/lovelesslifee')],
                       [Button.url('📣 Kanal', f'https://t.me/lovelesslifee')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/BenimHakan')]
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/Hakann100')]
                     ),
                     link_preview=False)
                     
@@ -79,7 +79,7 @@ async def handler(event):
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
                      [Button.url('📣 Söhbət Qrupu', f'https://t.me/lovelesslifee')],
                       [Button.url('📣 Kanal', f'https://t.me/lovelesslifee')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/BenimHakan')]
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/Hakann100')]
                     ),
                     link_preview=False)
 # gece kusu
