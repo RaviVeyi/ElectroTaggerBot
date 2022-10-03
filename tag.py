@@ -56,9 +56,9 @@ async def start(event):
                        Button.inline("✍ Əmrlər", data="help")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
-                     [Button.url('🥳 Söhbət Qrupu', f'https://t.me/{group}')],
-                      [Button.url('📣 Kanal', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
+                     [Button.url('🥳 Söhbət Qrupu', f'https://t.me/lovelesslifee')],
+                      [Button.url('📣 Kanal', f'https://t.me/lovelesslifee')],
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/BenimHakan')]
                     ),
                     link_preview=False)
                     
@@ -77,9 +77,9 @@ async def handler(event):
                        Button.inline("✍ Əmrlər", data="help")
                       ],
                       [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/{USERNAME}?startgroup=a')],
-                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/{group}')],
-                      [Button.url('📣 Kanal', f'https://t.me/{support}')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/{sahib}')]
+                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/lovelesslifee')],
+                      [Button.url('📣 Kanal', f'https://t.me/lovelesslifee')],
+                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/BenimHakan')]
                     ),
                     link_preview=False)
 # gece kusu
